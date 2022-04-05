@@ -1,5 +1,7 @@
 // == Import
 import './styles.scss';
+import SubHeader from './SubHeader';
+import Menu from './Menu';
 
 // == Composant
 const Header = () => {
@@ -7,7 +9,8 @@ const Header = () => {
   return (
 
   <div className="header">
-    header
+    <SubHeader />
+    <Menu />
   </div>
   );
 };

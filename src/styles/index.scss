@@ -2,7 +2,8 @@
 @use '../styles/vars' as v;
 
 body {
-  font-family: sans-serif;
+  
+  font-family: v.$font;
 
 }
 

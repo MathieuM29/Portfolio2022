@@ -1,0 +1,40 @@
+@use 'src/styles/vars' as v;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//desktop version
+
+//tablet version
+
+//mobil version
+@media (max-width: 375px) {
+
+  .subHeader {
+
+    height: 40%;
+    width: 100%;
+    background-color: v.$primary-color;
+    @include flex($direction: column, $justify: flex-start, $align: flex-start);
+    padding: 1em;
+
+    &--name {
+
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    &--job {
+
+      font-size: calc(v.$font-size / 1.1);
+      color: v.$secondary-color;
+    }
+  
+  }
+}
+
+
