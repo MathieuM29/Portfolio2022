@@ -1,4 +1,4 @@
-@use '../../styles/vars' as v;
+@use 'src/styles/vars' as v;
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -12,10 +12,9 @@
 //tablet version
 @media (max-width: 1024px) {
 
-  .portfolio {
+  .content {
 
-    height: 100vh;
-    width: 100vw;
+    
     background-color: v.$primary-color;
   
   }
@@ -24,10 +23,9 @@
 //mobil version
 @media (max-width: 375px) {
 
-  .portfolio {
+  .content {
 
-    height: 100vh;
-    width: 100vw;
+    
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
   
