@@ -10,16 +10,6 @@
 //desktop version
 
 //tablet version
-@media (max-width: 1024px) {
-
-  .header {
-
-    height: 100vh;
-    width: 100vw;
-    background-color: v.$primary-color;
-  
-  }
-}
 
 //mobil version
 @media (max-width: 375px) {
@@ -30,7 +20,7 @@
     width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
-  
+    margin-bottom: -12px;
   }
 }
 

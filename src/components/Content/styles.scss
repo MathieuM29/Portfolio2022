@@ -10,22 +10,13 @@
 //desktop version
 
 //tablet version
-@media (max-width: 1024px) {
-
-  .content {
-
-    
-    background-color: v.$primary-color;
-  
-  }
-}
 
 //mobil version
 @media (max-width: 375px) {
 
   .content {
 
-    
+    // margin-top: 50px;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
   

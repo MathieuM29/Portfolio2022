@@ -1,23 +1,19 @@
 // == Import
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
-import about from 'src/assets/images/about.png';
-import aboutFocus from 'src/assets/images/about_focus.png';
-import resume from 'src/assets/images/resume.png';
-import works from 'src/assets/images/works.png';
-import contact from 'src/assets/images/contact.png';
 
 // == Composant
 const Menu = () => {
 
 
+
   return (
 
   <div className="menu">
-    <NavLink className="menu__item" to="/about"><img className="menu__item--icon" src={about}/>About</NavLink>
-    <NavLink className="menu__item" to="/resume"><img className="menu__item--icon" src={resume}/>Resume</NavLink>
-    <NavLink className="menu__item" to="/works"><img className="menu__item--icon" src={works}/>Works</NavLink>
-    <NavLink className="menu__item" to="/contact"><img className="menu__item--icon" src={contact}/>Contact</NavLink>
+    <NavLink className="menu__item" to="/about"><i className="fa-solid fa-user menu__item--icon"></i>About</NavLink>
+    <NavLink className="menu__item" to="/resume"><i className="fa-solid fa-file menu__item--icon"></i>Resume</NavLink>
+    <NavLink className="menu__item" to="/works"><i className="fa-solid fa-person-digging menu__item--icon"></i>Works</NavLink>
+    <NavLink className="menu__item" to="/contact"><i className="fa-solid fa-at menu__item--icon"></i>Contact</NavLink>
   </div>
   );
 };

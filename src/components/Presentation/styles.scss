@@ -10,16 +10,6 @@
 //desktop version
 
 //tablet version
-@media (max-width: 1024px) {
-
-  .presentation {
-
-    height: 100vh;
-    width: 100vw;
-    background-color: v.$primary-color;
-  
-  }
-}
 
 //mobil version
 @media (max-width: 375px) {
@@ -30,7 +20,81 @@
     width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
+    margin-top: 12px;
   
+    &__picture {
+
+      height: 60%;
+
+      &--img {
+
+        max-width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0 90%);
+      }
+    }
+
+    &__infos {
+
+      margin-top: 2em;
+
+      &--title {
+
+        font-weight: 400;
+        font-size: calc(v.$font-size / 0.5); 
+        margin-bottom: 0.4em;
+      }
+
+      &--job {
+
+        font-size: calc(v.$font-size / 1); 
+        color: v.$secondary-color;
+        text-align: center;
+      }
+
+    }
+
+    &__social {
+
+      margin-top: 1.4em;
+      width: 20%;
+      @include flex($direction: row, $justify: space-evenly, $align: center);
+
+      &--github, &--twitter {
+
+        font-size: 1.4em;
+      }
+      
+
+    }
+
+    &__contact {
+
+      width: 100%;
+      height: 70px;
+      @include flex($direction: row, $justify: center, $align: center);
+      border-top: 1px solid black;
+      // border-bottom: 1px solid black;
+      margin-top: 96px;
+      
+      &__btn {
+
+        border-image: linear-gradient(to bottom, grey, rgba(0, 0, 0, 0)) 1 100%;
+        border-left: 1px solid v.$third-color;
+        width: 50%;
+        height: 100%;
+        @include flex($direction: row, $justify: center, $align: center);
+
+        &--cv, &--contact {
+
+          text-align: center;
+          height: 100%;
+          width: 50%;
+          
+        }
+      }
+
+      
+    }
   }
 }
 
