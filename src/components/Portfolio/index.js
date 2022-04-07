@@ -1,7 +1,6 @@
 // == Import
 import './styles.scss';
 import Header from '../Header';
-import Presentation from '../Presentation';
 import Content from '../Content';
 
 // == Composant
@@ -11,7 +10,6 @@ const Portfolio = () => {
 
   <div className="portfolio">
     <Header />
-    <Presentation />
     <Content />
   </div>
   );

@@ -20,7 +20,10 @@
     width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
-    margin-bottom: -12px;
+    // margin-bottom: -12px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 }
 

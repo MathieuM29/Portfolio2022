@@ -1,4 +1,4 @@
-@use '../../styles/vars' as v;
+@use 'src/styles/vars' as v;
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -20,7 +20,7 @@
     width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
-    margin-top: 12px;
+    margin-top: 1px;
   
     &__picture {
 
@@ -56,15 +56,13 @@
     &__social {
 
       margin-top: 1.4em;
-      width: 20%;
+      width: 30%;
       @include flex($direction: row, $justify: space-evenly, $align: center);
 
       &--github, &--twitter {
 
         font-size: 1.4em;
       }
-      
-
     }
 
     &__contact {
@@ -72,14 +70,14 @@
       width: 100%;
       height: 70px;
       @include flex($direction: row, $justify: center, $align: center);
-      border-top: 1px solid black;
-      // border-bottom: 1px solid black;
-      margin-top: 96px;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      margin-top: 95px;
       
       &__btn {
 
         border-image: linear-gradient(to bottom, grey, rgba(0, 0, 0, 0)) 1 100%;
-        border-left: 1px solid v.$third-color;
+        border-left: 1px solid v.$third-color; 
         width: 50%;
         height: 100%;
         @include flex($direction: row, $justify: center, $align: center);
