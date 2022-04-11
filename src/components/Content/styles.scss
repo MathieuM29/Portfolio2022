@@ -16,6 +16,7 @@
 
   .content {
     
+    width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
   
