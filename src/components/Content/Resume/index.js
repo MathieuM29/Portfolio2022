@@ -71,6 +71,7 @@ const Resume = () => {
                 <li className="resume__school__infos__card__desc__front__list--item">ES6</li>
                 <li className="resume__school__infos__card__desc__front__list--item">ReactJs</li>
                 <li className="resume__school__infos__card__desc__front__list--item">React-redux</li>
+                <li className="resume__school__infos__card__desc__front__list--item">Webpack</li>
                 <li className="resume__school__infos__card__desc__front__list--item">Responsive</li>
                 <li className="resume__school__infos__card__desc__front__list--item">Mobil-first</li>
                 <li className="resume__school__infos__card__desc__front__list--item">Wireframing</li>
@@ -114,7 +115,7 @@ const Resume = () => {
         </div>
         <div className="resume__school__infos__card">
           <p className="resume__school__infos__card--year">2018 - 2019</p>
-          <p className="resume__school__infos__card--post">Développeur d'applications multimédia</p>
+          <p className="resume__school__infos__card--post">Titre professionnel "Développeur d'applications multimédia"</p>
           <p className="resume__xp__infos__card--company">Web Digital School</p>
           <div className="resume__school__infos__card__desc">
             <p className="resume__school__infos__card__desc--text">Formation de 10 mois sur le développement web et le design avec un stage de 2 mois réalisé chez Eskem Studio.</p>
@@ -155,9 +156,68 @@ const Resume = () => {
     </div>
 
     <div className="resume__skills">
+      <div className="resume__skills__title">
+        <h2 className="resume__skills__title--text"><span>Mes</span> compétences</h2>
+      </div> 
+      <div className="resume__skills__subTitle">
+        <i className="fa-solid fa-code resume__skills__subTitle--icon"></i>
+        <h3 className="resume__skills__subTitle--text">Développement / intégration</h3>
+      </div>
+      <div className="resume__skills__content">
+        <div className="resume__skills__content__item">
+          <i className="fa-brands fa-html5 resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">HTML5</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-brands fa-css3-alt resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">CSS3</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-brands fa-js-square resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">JavaScript</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-brands fa-bootstrap resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">Bootstrap</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-brands fa-react resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">React</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-brands fa-node resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">Node.js</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-solid fa-window-maximize resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">Responsive</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-solid fa-database resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">PostgreSql</p>
+        </div>
+        <div className="resume__skills__content__item">
+          <i className="fa-solid fa-server resume__skills__content__item--icon"></i>
+          <p className="resume__skills__content__item--title">API</p>
+        </div>
 
 
+      </div>
 
+    </div>
+
+    <div className="resume__design">
+      <div className="resume__design__subTitle">
+        <i className="fa-solid fa-wand-magic resume__design__subTitle--icon"></i>
+        <h3 className="resume__design__subTitle--text">Design</h3>
+      </div>
+    </div>
+
+    <div className="resume__langage">
+      <div className="resume__langage__subTitle">
+        <i className="fa-solid fa-earth-europe resume__langage__subTitle--icon"></i>
+        <h3 className="resume__langage__subTitle--text">Langues</h3>
+      </div>
     </div>
     
 
