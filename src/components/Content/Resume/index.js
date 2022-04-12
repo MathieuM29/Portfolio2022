@@ -1,5 +1,12 @@
 // == Import
 import './styles.scss';
+import ps from 'src/assets/images/ps.svg';
+import indesign from 'src/assets/images/indesign.svg';
+import illustrator from 'src/assets/images/illustrator.svg';
+import group from 'src/assets/images/group.svg';
+import xd from 'src/assets/images/xd.svg';
+import fr from 'src/assets/images/fr.png';
+import uk from 'src/assets/images/uk.png';
 
 // == Composant
 const Resume = () => {
@@ -200,8 +207,6 @@ const Resume = () => {
           <i className="fa-solid fa-server resume__skills__content__item--icon"></i>
           <p className="resume__skills__content__item--title">API</p>
         </div>
-
-
       </div>
 
     </div>
@@ -211,23 +216,48 @@ const Resume = () => {
         <i className="fa-solid fa-wand-magic resume__design__subTitle--icon"></i>
         <h3 className="resume__design__subTitle--text">Design</h3>
       </div>
-    </div>
-
-    <div className="resume__langage">
-      <div className="resume__langage__subTitle">
-        <i className="fa-solid fa-earth-europe resume__langage__subTitle--icon"></i>
-        <h3 className="resume__langage__subTitle--text">Langues</h3>
+      <div className="resume__design__content">
+        <div className="resume__design__content__item">
+          <img className="resume__design__content__item--icon" src={ps} />
+          <p className="resume__design__content__item--title">Photoshop</p>
+        </div>
+        <div className="resume__design__content__item">
+          <img className="resume__design__content__item--icon" src={indesign} />
+          <p className="resume__design__content__item--title">Indesign</p>
+        </div>
+        <div className="resume__design__content__item">
+          <img className="resume__design__content__item--icon" src={illustrator} />
+          <p className="resume__design__content__item--title">Illustrator</p>
+        </div>
+        <div className="resume__design__content__item">
+          <img className="resume__design__content__item--icon" src={group} />
+          <p className="resume__design__content__item--title">Whimsical</p>
+        </div>
+        <div className="resume__design__content__item">
+          <img className="resume__design__content__item--icon" src={xd} />
+          <p className="resume__design__content__item--title">Adobe xD</p>
+        </div>        
       </div>
     </div>
-    
+
+    <div className="resume__language">
+      <div className="resume__language__subTitle">
+        <i className="fa-solid fa-earth-europe resume__language__subTitle--icon"></i>
+        <h3 className="resume__language__subTitle--text">Langues</h3>
+      </div>
+      <div className="resume__language__languages">
+        <div className="resume__language__languages__french">
+          <img className="resume__language__languages__french--icon" src={fr} />
+          <p className="resume__language__languages__french--text">Langue maternelle</p>
+        </div>
+        <div className="resume__language__languages__english">
+          <img className="resume__lanugage__languages__english--icon" src={uk} />
+          <p className="resume__language__languages__english--text">Bonne compréhension écrite et orale</p>
+        </div>
 
 
-
-
-
-
-
-    
+      </div>
+    </div>    
   </div>
   );
 };
