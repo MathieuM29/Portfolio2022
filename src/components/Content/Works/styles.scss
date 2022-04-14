@@ -10,26 +10,66 @@
 //desktop version
 
 //tablet version
-@media (max-width: 1024px) {
-
-  .works {
-
-    // height: 100vh;
-    // width: 100vw;
-    background-color: v.$primary-color;
-  
-  }
-}
 
 //mobil version
-@media (max-width: 375px) {
+@media screen and (min-width: 320px) and (max-width: 420px) {
 
   .works {
 
-    // height: 80%;
-    // width: 100%;
+    height: 80%;
+    width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
+
+    &__title {
+
+      width: 100%;
+      padding: 1.4em 0;
+      border-bottom: 1px solid v.$third-color;
+
+      &--text {
+
+        padding: 0 1.4em;
+        font-size: calc(v.$font-size / 0.8);
+        font-weight: 700;
+      }
+
+      &--text span {
+
+        color: v.$secondary-color;
+      }
+    }
+
+    &__filter {
+
+      @include flex($direction: row, $justify: space-evenly, $align: center);
+      padding: 1.4em;
+      width: 100%;
+      border-bottom: 1px solid v.$third-color;
+      border-image: linear-gradient(100deg, v.$third-color, white) 1;
+
+      &__btn {
+
+        padding: 0.3em;
+        // border: 1px solid black;
+
+        &--label {
+
+
+        }
+
+        &--input {
+
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+
+      @include flex($direction: column, $justify: flex-start, $align: center);
+      padding: 1.4em;
+    }
   
   }
 }

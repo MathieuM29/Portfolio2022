@@ -1,10 +1,13 @@
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
-export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
+export const LOAD_DATAS = 'LOAD_DATAS';
+export const RECEIVED_DATAS = 'RECEIVED_DATAS';
 
-export const increment = () => ({
-  type: INCREMENT_COUNTER,
+export const loadDatas = () => ({
+  type: LOAD_DATAS,
 });
 
-export const decrement = () => ({
-  type: DECREMENT_COUNTER,
+export const receivedDatas = (payload) => ({
+  type: RECEIVED_DATAS,
+  payload,
 });
+
+

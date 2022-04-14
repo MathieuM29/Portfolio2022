@@ -1,0 +1,55 @@
+@use 'src/styles/vars' as v;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//desktop version
+
+//tablet version
+
+//mobil version
+@media screen and (min-width: 320px) and (max-width: 420px) {
+
+  .work {
+
+    height: 250px;
+    width: 90%;
+    background-color: v.$primary-color;
+    @include flex($direction: column, $justify: space-around, $align: center);
+    box-shadow: 3px 3px 5px 1px v.$third-color;
+    margin-bottom: 3em;
+    border-bottom: 1px solid v.$third-color;
+    border-image: linear-gradient(100deg, v.$third-color, white) 1;
+
+    &__picture {
+
+      height: 70%;
+      width: 100%;
+      @include flex($direction: row, $justify: center, $align: center);
+
+      &--img {
+
+        max-width: 60%;
+      }
+    }
+
+    &__name {
+
+      font-size: calc(v.$font-size / 0.8);
+      
+    }
+
+    &__category {
+
+      color: #222;
+    }
+
+  
+  }
+}
+
+
