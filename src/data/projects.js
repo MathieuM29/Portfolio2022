@@ -34,9 +34,55 @@ export default {
       "description": "Projet réalisé dans le cadre de mon stage à l'agence Eskem Studio pendant ma formation Développeur d'applications multimédia a l'école Web Digital School. C'est un site web administrable servant a détailler l'activité du photographe Nico Le Men, photographe de mer, réalisé et configuré grâce au CMS Modx.",
       "git_url": "",
       "site_url": "https://www.cours-photo-brest.fr/",
-      "cover": "https://www.cours-photo-brest.fr/assets/templates/cpb/img/logo_NLM_blanc.png",
+      "cover": "https://www.cours-photo-brest.fr/cpb/27.jpg",
       "category": "websites",
       "label": "Site web"
+    },
+    {
+      "id": 3,
+      "name": "L'Aod Maison d'hôtes",
+      "technos": [
+        "HTML",
+        "CSS",
+        "Weebly"
+      ],
+      "description": "Projet réalisé dans le cadre de mon stage à l'agence Eskem Studio pendant ma formation Développeur d'applications multimédia a l'école Web Digital School. C'est un site web administrable servant a détailler l'activité de la maison d'hôtes insulaire qui se situe a Ouessant, réalisé et configuré grâce au CMS Weebly.",
+      "git_url": "",
+      "site_url": "https://www.aod-ouessant.fr/",
+      "cover": "https://www.aod-ouessant.fr/uploads/1/2/4/8/124868072/logo-sans-texte.png",
+      "category": "websites",
+      "label": "Site web"
+    },
+    {
+      "id": 4,
+      "name": "Design",
+      "technos": [
+        "HTML",
+        "CSS",
+        "Weebly"
+      ],
+      "description": "Projet réalisé dans le cadre de mon stage à l'agence Eskem Studio pendant ma formation Développeur d'applications multimédia a l'école Web Digital School. C'est un site web administrable servant a détailler l'activité de la maison d'hôtes insulaire qui se situe a Ouessant, réalisé et configuré grâce au CMS Weebly.",
+      "git_url": "",
+      "site_url": "https://www.aod-ouessant.fr/",
+      "cover": "https://www.aod-ouessant.fr/uploads/1/2/4/8/124868072/logo-sans-texte.png",
+      "category": "design",
+      "label": "Design"
+    },
+    {
+      "id": 5,
+      "name": "Form",
+      "technos": [
+        "HTML",
+        "CSS",
+        "Weebly"
+      ],
+      "description": "Projet réalisé dans le cadre de mon stage à l'agence Eskem Studio pendant ma formation Développeur d'applications multimédia a l'école Web Digital School. C'est un site web administrable servant a détailler l'activité de la maison d'hôtes insulaire qui se situe a Ouessant, réalisé et configuré grâce au CMS Weebly.",
+      "git_url": "",
+      "site_url": "https://www.aod-ouessant.fr/",
+      "cover": "https://www.aod-ouessant.fr/uploads/1/2/4/8/124868072/logo-sans-texte.png",
+      "category": "component",
+      "label": "Design"
     }
+
   ]
 }

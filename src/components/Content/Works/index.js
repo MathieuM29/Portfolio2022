@@ -1,17 +1,30 @@
 // == Import
 import './styles.scss';
+import { useState } from 'react';
 import datas from 'src/data/projects';
 import Work from './Work';
 
 // == Composant
 const Works = () => {
 
-  console.log(datas.items);
+  const [results, setResults] = useState(datas.items);
+
+  const arrayFiltered = (e) => {
+
+    const result = datas.items.filter((data) => e.target.value === data.category);
+    return result;
+  };
 
   const handleClick = (e) => {
 
-    console.log('click', e.target.value);
-
+    if (e.target.value === "all")
+    {
+      setResults(datas.items);
+    }
+    else
+    {
+      setResults(arrayFiltered(e));
+    };
   };
 
   return (
@@ -48,7 +61,7 @@ const Works = () => {
     </div>
     <div className="works__content">
       
-      {datas.items.map((data) => (<Work key={data.id} {...data} />))}
+      {results.map((data) => (<Work key={data.id} {...data} />))}
       
     </div>
   </div>

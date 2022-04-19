@@ -16,11 +16,11 @@
 
   .work {
 
-    height: 250px;
+    height: 300px;
     width: 90%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: space-around, $align: center);
-    box-shadow: 3px 3px 5px 1px v.$third-color;
+    box-shadow: 1px 1px 5px 1px v.$third-color;
     margin-bottom: 3em;
     border-bottom: 1px solid v.$third-color;
     border-image: linear-gradient(100deg, v.$third-color, white) 1;
@@ -33,7 +33,7 @@
 
       &--img {
 
-        max-width: 60%;
+        max-width: 90%;
       }
     }
 
