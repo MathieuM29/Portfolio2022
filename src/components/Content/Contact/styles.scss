@@ -20,6 +20,7 @@
     width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: center);
+    position: relative;
 
     &__title {
 
@@ -109,6 +110,30 @@
           font-weight: 700;
         }
 
+        &--input--empty {
+
+          
+          width: 100%;
+          border: 2px solid red;
+          margin-bottom: 2em;
+          padding: 1.2em;
+          color: v.$secondary-color;
+          transition: 0.5s;
+          font-weight: 700;   
+        }
+
+        &--input--succes {
+
+          
+          width: 100%;
+          border: 2px solid v.$secondary-color;
+          margin-bottom: 2em;
+          padding: 1.2em;
+          color: v.$secondary-color;
+          transition: 0.5s;
+          font-weight: 700;   
+        }
+
         &--input:focus {
 
           border: 2px solid v.$secondary-color;
@@ -118,13 +143,36 @@
 
           font-size: calc(v.$font-size / 1);
           color: #444;
+          font-weight: normal;
+        }
+
+        &--input--empty::placeholder {
+
+          font-size: calc(v.$font-size / 1);
+          color: #444;
+          font-weight: normal;
+        }
+
+        &--input--succes::placeholder {
+
+          font-size: calc(v.$font-size / 1);
+          color: #444;
+          font-weight: normal;
         }
 
         &--input[type="textarea"] {
 
-          height: 100px;
-          // padding: -1em;
-          
+          height: 100px; 
+        }
+
+        &--input--empty[type="textarea"] {
+
+          height: 100px; 
+        }
+
+        &--input--succes[type="textarea"] {
+
+          height: 100px; 
         }
 
         &--btn {

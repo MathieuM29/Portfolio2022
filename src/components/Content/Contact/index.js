@@ -1,25 +1,45 @@
 // == Import
 import './styles.scss';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeInputValue } from 'src/actions'; 
+import { useEffect } from 'react';
+import { changeInputValue, checkIfEmpty, checkIfSucces } from 'src/actions';
+import Succes from './Succes';
 
 // == Composant
 const Contact = () => {
   const dispatch = useDispatch();
-  const { nameForm, mailForm, messageForm } = useSelector((state) => state);
+  const { nameForm, mailForm, messageForm, isEmpty, isSucces } = useSelector((state) => state);
 
+  const classnames = isEmpty ? 'contact__form--input--empty' : 'contact__form--input';
+  // classnames = isSucces ? 'contact__form--input--succes' : 'contact__form--input';
+  // const classnames = (isEmpty ? isSucces ? 'contact__form--input--empty' : 'contact__form--input--succes' : 'contact__form--input');
+  
   const handleInputChange = (e) => {
-
     dispatch(changeInputValue(e.target.value, e.target.name));
     console.log(e.target.value, e.target.name);
   };
 
-  const handleSubmit = (e) => {
-
-    e.preventDefault();
-    console.log('submit',nameForm, mailForm, messageForm)
-
+  const checkInput = () => {
+    if (!nameForm, !mailForm, !messageForm) {
+      dispatch(checkIfEmpty());
+    } 
+    else {
+      dispatch(checkIfSucces());
+      console.log('done');
+      
+      setTimeout(() => {
+        dispatch(checkIfSucces());
+      }, 3000);
+    }
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('submit', nameForm, mailForm, messageForm);
+    checkInput();
+  };
+
+  
 
   return (
     <div className="contact">
@@ -51,11 +71,12 @@ const Contact = () => {
         <h2 className="contact__title--text"><span>Contactez</span> moi</h2>
       </div>
       <form className="contact__form" onSubmit={handleSubmit}>
-        <input className="contact__form--input" type="text" value={nameForm} name="nameForm" placeholder="Nom complet" onChange={handleInputChange} />
-        <input className="contact__form--input" type="text" value={mailForm} name="mailForm" placeholder="Adresse e-mail" onChange={handleInputChange} />
-        <input className="contact__form--input" type="textarea" value={messageForm} name="messageForm" placeholder="Votre message" onChange={handleInputChange} />
+        <input className={classnames} type="text" value={nameForm} name="nameForm" placeholder="Nom complet" onChange={handleInputChange} />
+        <input className={classnames} type="text" value={mailForm} name="mailForm" placeholder="Adresse e-mail" onChange={handleInputChange} />
+        <input className={classnames} type="textarea" value={messageForm} name="messageForm" placeholder="Votre message" onChange={handleInputChange} />
         <button className="contact__form--btn" type="submit">Envoyer</button>
       </form>
+      {isSucces && <Succes />}
     </div>
   );
 };
