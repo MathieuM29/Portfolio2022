@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { changeInputValue, checkIfEmpty, checkIfSucces } from 'src/actions';
 import Succes from './Succes';
+import Error from './Error';
 
 // == Composant
 const Contact = () => {
@@ -26,7 +27,7 @@ const Contact = () => {
     else {
       dispatch(checkIfSucces());
       console.log('done');
-      
+
       setTimeout(() => {
         dispatch(checkIfSucces());
       }, 3000);
@@ -71,6 +72,7 @@ const Contact = () => {
         <h2 className="contact__title--text"><span>Contactez</span> moi</h2>
       </div>
       <form className="contact__form" onSubmit={handleSubmit}>
+        {isEmpty && <Error />}
         <input className={classnames} type="text" value={nameForm} name="nameForm" placeholder="Nom complet" onChange={handleInputChange} />
         <input className={classnames} type="text" value={mailForm} name="mailForm" placeholder="Adresse e-mail" onChange={handleInputChange} />
         <input className={classnames} type="textarea" value={messageForm} name="messageForm" placeholder="Votre message" onChange={handleInputChange} />

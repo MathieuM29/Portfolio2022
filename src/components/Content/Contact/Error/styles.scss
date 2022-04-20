@@ -1,0 +1,36 @@
+@use 'src/styles/vars' as v;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//desktop version
+
+//tablet version
+
+//mobil version
+@media screen and (min-width: 320px) and (max-width: 420px) {
+
+  .error {
+
+    margin-bottom: 1.2em;
+
+    &--text {
+
+      font-size: calc(v.$font-size / 1.1);
+    }
+
+    &--icon {
+
+      margin: 0 0.4em;
+      font-size: calc(v.$font-size / 0.8);
+      color: red;
+
+    }
+  }
+}
+
+
