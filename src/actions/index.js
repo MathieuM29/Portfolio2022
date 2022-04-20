@@ -1,12 +1,13 @@
-export const LOAD_DATAS = 'LOAD_DATAS';
-export const RECEIVED_DATAS = 'RECEIVED_DATAS';
+export const DISPLAY_MODALE = 'DISPLAY_MODALE';
+export const SAVE_OFFSET = 'SAVE_OFFSET';
 
-export const loadDatas = () => ({
-  type: LOAD_DATAS,
+export const displayModale = (payload) => ({
+  type: DISPLAY_MODALE,
+  payload,
 });
 
-export const receivedDatas = (payload) => ({
-  type: RECEIVED_DATAS,
+export const saveOffset = (payload) => ({
+  type: SAVE_OFFSET,
   payload,
 });
 

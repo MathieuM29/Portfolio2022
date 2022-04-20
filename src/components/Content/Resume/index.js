@@ -19,7 +19,7 @@ const Resume = () => {
         <h2 className="resume__xp__title--text"><span>Expériences</span> et formation</h2>
       </div> 
       <div className="resume__xp__subTitle">
-        <i class="fa-solid fa-briefcase resume__xp__subTitle--icon"></i>
+        <i className="fa-solid fa-briefcase resume__xp__subTitle--icon"></i>
         <h3 className="resume__xp__subTitle--text">Expérience</h3>
       </div>
       <div className="resume__xp">
@@ -49,7 +49,7 @@ const Resume = () => {
 
     <div className="resume__school">
       <div className="resume__school__subTitle">
-        <i class="fa-solid fa-graduation-cap resume__school__subTitle--icon"></i>
+        <i className="fa-solid fa-graduation-cap resume__school__subTitle--icon"></i>
         <h3 className="resume__school__subTitle--text">Formation</h3>
       </div>
       <div className="resume__school">

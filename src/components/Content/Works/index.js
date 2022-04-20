@@ -1,13 +1,24 @@
 // == Import
 import './styles.scss';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useRef } from 'react';
+import { saveOffset } from 'src/actions';
 import datas from 'src/data/projects';
 import Work from './Work';
+import Modale from './Modale';
 
 // == Composant
 const Works = () => {
 
+  const dispatch = useDispatch();
+
   const [results, setResults] = useState(datas.items);
+  const { isVisible, currentId } = useSelector((state) => state);
+
+  const currentIdDatas = datas.items.filter((data) => currentId === data.id);
+
+  console.log(currentIdDatas);
 
   const arrayFiltered = (e) => {
 
@@ -24,7 +35,7 @@ const Works = () => {
     else
     {
       setResults(arrayFiltered(e));
-    };
+    }
   };
 
   return (
@@ -48,8 +59,8 @@ const Works = () => {
       </div>
       <div className="works__filter__btn">
         <label className="works__filter__btn--label">
-          <input className="works__filter__btn--input" type="radio" name="btn_radio" value="design" onClick={handleClick}/>
-          Design
+          <input className="works__filter__btn--input" type="radio" name="btn_radio" value="integration" onClick={handleClick}/>
+          Intégration
         </label>
       </div>
       <div className="works__filter__btn">
@@ -64,6 +75,9 @@ const Works = () => {
       {results.map((data) => (<Work key={data.id} {...data} />))}
       
     </div>
+
+    {isVisible && <Modale key={currentId} {...currentIdDatas[0]} />}
+  
   </div>
   );
 };
