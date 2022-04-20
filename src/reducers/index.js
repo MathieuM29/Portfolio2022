@@ -1,12 +1,11 @@
 import {
   DISPLAY_MODALE,
-  SAVE_OFFSET,
+  CHANGE_INPUT_VALUE,
 } from '../actions';
 
 const stateInitial = {
   isVisible: false,
   currentId: null,
-  // offSetWorks: 0,
 };
 
 export default (state = stateInitial, action = {}) => {
@@ -17,11 +16,11 @@ export default (state = stateInitial, action = {}) => {
         isVisible: !state.isVisible,
         currentId: action.payload,
       };
-    // case SAVE_OFFSET:
-    //   return {
-    //     ...state,
-    //     offSetWorks: action.payload,
-    //   };
+      case CHANGE_INPUT_VALUE:
+      return {
+        ...state,
+        [action.payload.key]: action.payload.value,
+      };
     default:
       return state;
   }
