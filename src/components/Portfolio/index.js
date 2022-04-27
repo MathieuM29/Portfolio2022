@@ -11,10 +11,10 @@ const Portfolio = () => {
 
   return (
 
-  <div className="portfolio">
+  <main className="portfolio">
     <Header />
     <Content />
-  </div>
+  </main>
   );
 };
 

@@ -3,6 +3,7 @@ export const SAVE_OFFSET = 'SAVE_OFFSET';
 export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 export const CHECK_IF_EMPTY = 'CHECK_IF_EMPTY';
 export const CHECK_IF_SUCCES = 'CHECK_IF_SUCCES';
+export const IS_ITEM_ACTIVE = 'IS_ITEM_ACTIVE';
 
 export const displayModale = (payload) => ({
   type: DISPLAY_MODALE,
@@ -29,3 +30,6 @@ export const checkIfSucces = () => ({
   type: CHECK_IF_SUCCES,
 });
 
+export const isItemActive = () => ({
+  type: IS_ITEM_ACTIVE,
+});

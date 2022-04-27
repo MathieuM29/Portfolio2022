@@ -3,6 +3,7 @@ import {
   CHANGE_INPUT_VALUE,
   CHECK_IF_EMPTY,
   CHECK_IF_SUCCES,
+  IS_ITEM_ACTIVE,
 } from '../actions';
 
 const stateInitial = {
@@ -10,6 +11,7 @@ const stateInitial = {
   currentId: null,
   isEmpty: false,
   isSucces: false,
+  isActive: false,
 };
 
 export default (state = stateInitial, action = {}) => {
@@ -34,6 +36,11 @@ export default (state = stateInitial, action = {}) => {
         return {
           ...state,
           isEmpty: !state.isEmpty,
+        };
+      case IS_ITEM_ACTIVE:
+        return {
+          ...state,
+          isActive: !state.isActive,
         };
     default:
       return state;

@@ -11,14 +11,12 @@ import Modale from './Modale';
 // == Composant
 const Works = () => {
 
-  const dispatch = useDispatch();
-
   const [results, setResults] = useState(datas.items);
   const { isVisible, currentId } = useSelector((state) => state);
 
   const currentIdDatas = datas.items.filter((data) => currentId === data.id);
 
-  console.log(currentIdDatas);
+  // console.log(currentIdDatas);
 
   const arrayFiltered = (e) => {
 
@@ -40,7 +38,7 @@ const Works = () => {
 
   return (
 
-  <div className="works">
+  <section className="works">
     <div className="works__title">
       <h2 className="works__title--text"><span>Mes</span> projets</h2>
     </div> 
@@ -78,7 +76,7 @@ const Works = () => {
 
     {isVisible && <Modale key={currentId} {...currentIdDatas[0]} />}
   
-  </div>
+  </section>
   );
 };
 

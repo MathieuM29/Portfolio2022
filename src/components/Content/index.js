@@ -12,7 +12,7 @@ const Content = () => {
 
   return (
 
-  <div className="content">
+  <section className="content">
     <Routes>
       <Route path="/" element={<Presentation />} />
       <Route path="/about" element={<About />} />
@@ -20,7 +20,7 @@ const Content = () => {
       <Route path="/works" element={<Works />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
-  </div>
+  </section>
   );
 };
 

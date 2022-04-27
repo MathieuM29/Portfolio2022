@@ -12,8 +12,7 @@ import uk from 'src/assets/images/uk.png';
 const Resume = () => {
 
   return (
-  <div className="resume">
-
+  <section className="resume">
     <div className="resume__xp">
       <div className="resume__xp__title">
         <h2 className="resume__xp__title--text"><span>Expériences</span> et formation</h2>
@@ -30,7 +29,7 @@ const Resume = () => {
           <p className="resume__xp__infos__card--desc">Projet réalisé en groupe en fin de formation.</p>
           <p className="resume__xp__infos__card--subDesc">Création d'un site web : <br /><span>(voir détails à la page Works)</span></p>
           <div className="resume__xp__infos__card__projects">
-            <a className="resume__xp__infos__card__projects--link" href="https://playtogether.surge.sh/">PlayTogether</a>
+            <a className="resume__xp__infos__card__projects--link" title="Projet Playtogether" href="https://playtogether.surge.sh/">PlayTogether</a>
           </div>
         </div>
         <div className="resume__xp__infos__card">
@@ -40,8 +39,8 @@ const Resume = () => {
           <p className="resume__xp__infos__card--desc">Stage de 2 mois réalisé dans le cadre de la formation "Développeur d'applications multimédias" a l'école Web Digital School.</p>
           <p className="resume__xp__infos__card--subDesc">Création de deux projets de sites web : <br /><span>(voir détails à la page Works)</span></p>
           <div className="resume__xp__infos__card__projects">
-            <a className="resume__xp__infos__card__projects--link" href="https://www.cours-photo-brest.fr/">Cours photos Brest</a>
-            <a className="resume__xp__infos__card__projects--link" href="https://www.aod-ouessant.fr/">L'Aod Ouessant</a>
+            <a className="resume__xp__infos__card__projects--link" title="Projet Cours photo Brest" href="https://www.cours-photo-brest.fr/">Cours photos Brest</a>
+            <a className="resume__xp__infos__card__projects--link" title="Projet L'Aod Ouessant" href="https://www.aod-ouessant.fr/">L'Aod Ouessant</a>
           </div>
         </div>
       </div>
@@ -59,7 +58,7 @@ const Resume = () => {
           <p className="resume__xp__infos__card--company">OPQUAST</p>
           <p className="resume__school__infos__card--desc">Apprentissage des règles et recommandations des bonnes pratiques du web et familiarisation des différents métiers.</p>
           <div className="resume__school__infos__card__projects">
-            <a className="resume__school__infos__card__projects--link" href="https://www.opquast.com/">OPQUAST</a>
+            <a className="resume__school__infos__card__projects--link" title="Certification Maitrise de la qualité en projet web - OPQUAST" href="https://www.opquast.com/">OPQUAST</a>
           </div>
         </div>
         <div className="resume__school__infos__card">
@@ -218,23 +217,23 @@ const Resume = () => {
       </div>
       <div className="resume__design__content">
         <div className="resume__design__content__item">
-          <img className="resume__design__content__item--icon" src={ps} />
+          <img className="resume__design__content__item--icon" alt="Photoshop" src={ps} />
           <p className="resume__design__content__item--title">Photoshop</p>
         </div>
         <div className="resume__design__content__item">
-          <img className="resume__design__content__item--icon" src={indesign} />
+          <img className="resume__design__content__item--icon" alt="Indesign" src={indesign} />
           <p className="resume__design__content__item--title">Indesign</p>
         </div>
         <div className="resume__design__content__item">
-          <img className="resume__design__content__item--icon" src={illustrator} />
+          <img className="resume__design__content__item--icon" alt="Illustrator" src={illustrator} />
           <p className="resume__design__content__item--title">Illustrator</p>
         </div>
         <div className="resume__design__content__item">
-          <img className="resume__design__content__item--icon" src={group} />
+          <img className="resume__design__content__item--icon" alt="Whimsical" src={group} />
           <p className="resume__design__content__item--title">Whimsical</p>
         </div>
         <div className="resume__design__content__item">
-          <img className="resume__design__content__item--icon" src={xd} />
+          <img className="resume__design__content__item--icon" alt="Adobe xD" src={xd} />
           <p className="resume__design__content__item--title">Adobe xD</p>
         </div>        
       </div>
@@ -247,18 +246,16 @@ const Resume = () => {
       </div>
       <div className="resume__language__languages">
         <div className="resume__language__languages__french">
-          <img className="resume__language__languages__french--icon" src={fr} />
+          <img className="resume__language__languages__french--icon" alt="Langue Française" src={fr} />
           <p className="resume__language__languages__french--text">Langue maternelle</p>
         </div>
         <div className="resume__language__languages__english">
-          <img className="resume__lanugage__languages__english--icon" src={uk} />
+          <img className="resume__lanugage__languages__english--icon" alt="Langue anglaise" src={uk} />
           <p className="resume__language__languages__english--text">Bonne compréhension écrite et orale</p>
         </div>
-
-
       </div>
     </div>    
-  </div>
+  </section>
   );
 };
 

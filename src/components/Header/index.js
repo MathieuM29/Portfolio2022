@@ -8,10 +8,10 @@ const Header = () => {
 
   return (
 
-  <div className="header">
+  <header className="header">
     <SubHeader />
     <Menu />
-  </div>
+  </header>
   );
 };
 

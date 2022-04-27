@@ -20,13 +20,11 @@ const Modale = ({name, description, cover, git_url, label, site_url, technos}) =
     modaleRef.current.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
-  
-
   return (
-    <div className="modale" ref={modaleRef}> 
+    <article className="modale" ref={modaleRef}> 
       <div className="modale__picture">
         <i className="fa-solid fa-xmark modale__picture--cross" onClick={handleModale} ></i>
-        <img className="modale__picture--img" src={cover}/>
+        <img className="modale__picture--img" src={cover} alt={name}/>
       </div>
       <div className="modale__desc">
         <p className="modale__desc--title">{name}</p>
@@ -36,11 +34,11 @@ const Modale = ({name, description, cover, git_url, label, site_url, technos}) =
           {technos.map((techno) => <li key={techno} className="modale__desc__listTechnos--item">{techno}</li>)}
         </ul>
         <div className="modale__desc__btns">
-          <a className="modale__desc__btns--link" href={site_url}>Voir projet</a>
-          <a className="modale__desc__btns--link" href={git_url}>Voir gitHub</a>
+          <a className="modale__desc__btns--link" title="Voir projet en ligne" href={site_url}>Voir projet</a>
+          <a className="modale__desc__btns--link" title="Voir projet sur GitHub" href={git_url}>Voir gitHub</a>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

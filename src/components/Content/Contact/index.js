@@ -40,10 +40,8 @@ const Contact = () => {
     checkInput();
   };
 
-  
-
   return (
-    <div className="contact">
+    <section className="contact">
       <div className="contact__title">
         <h2 className="contact__title--text"><span>Rester</span> en contact</h2>
       </div> 
@@ -53,15 +51,15 @@ const Contact = () => {
       <div className="contact__infos">
         <div className="contact__infos__container">
           <p className="contact__infos__container--text">Adresse</p>
-          <p className="contact__infos__container--data">Brest 29200, France</p>
+          <address className="contact__infos__container--data">Brest 29200, France</address>
         </div>
         <div className="contact__infos__container">
           <p className="contact__infos__container--text">Email</p>
-          <p className="contact__infos__container--data">marcmathieu29@gmail.com</p>
+          <a href="mailto:marcmathieu29@gmail.com?subject=Demande de renseignements" className="contact__infos__container--data">marcmathieu29@gmail.com</a>
         </div>
         <div className="contact__infos__container">
           <p className="contact__infos__container--text">Téléphone</p>
-          <p className="contact__infos__container--data">06.64.31.60.56</p>
+          <a href="tel:+33664316056" className="contact__infos__container--data" title="Mon numéro de téléphone">06.64.31.60.56</a>
         </div>
         <div className="contact__infos__container">
           <p className="contact__infos__container--text">Disponibilité</p>
@@ -79,7 +77,7 @@ const Contact = () => {
         <button className="contact__form--btn" type="submit">Envoyer</button>
       </form>
       {isSucces && <Succes />}
-    </div>
+    </section>
   );
 };
 

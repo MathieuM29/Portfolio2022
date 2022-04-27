@@ -5,12 +5,11 @@ import './styles.scss';
 const About = () => {
 
   return (
-
-  <div className="about">
+  <section className="about">
     <div className="about__title">
       <h2 className="about__title--text"><span>A propos</span> de moi</h2>
     </div>    
-    <p className="about--desc">Hi there ! je m'appelle Mathieu Marc, je suis développeur front-end / fullstack. En effet, je travail autant sur la partie front-end que sur le back-end mais avec une petite préférence pour l'intégration et le développement côté navigateur.</p>
+    <p className="about--desc">Salut a toi ! je m'appelle Mathieu Marc, je suis développeur front-end / fullstack. En effet, je travail autant sur la partie front-end que sur le back-end mais avec une petite préférence pour l'intégration et le développement côté navigateur.</p>
     <div className="about__infos">
       <div className="about__infos__container">
         <p className="about__infos__container--text">Age</p>
@@ -28,10 +27,8 @@ const About = () => {
         <p className="about__infos__container--text">Twitter</p>
         <p className="about__infos__container--data">marcmathieu29</p>
       </div>
-
     </div>
-
-  </div>
+  </section>
   );
 };
 

@@ -17,13 +17,13 @@ const Work = ({ id, name, cover, label }) => {
 
 
   return (
-  <div className="work" onClick={handleModale}>
+  <article className="work" onClick={handleModale}>
     <div className="work__picture">
-      <img className="work__picture--img" src={cover} />
+      <img className="work__picture--img" alt={name} src={cover} />
     </div>
     <p className="work__name">{name}</p>
     <p className="work__category">{label}</p>
-  </div>
+  </article>
   );
 };
 
