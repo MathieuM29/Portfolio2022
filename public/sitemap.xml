@@ -1,0 +1,17 @@
+<sitemapindex xmlns="https://mathieumarc.surge.sh/sitemap.xml">
+    <sitemap>
+        <loc>https://mathieumarc.surge.sh/</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://mathieumarc.surge.sh/about</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://mathieumarc.surge.sh/resume</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://mathieumarc.surge.sh/works</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://mathieumarc.surge.sh/contact</loc>
+    </sitemap>
+</sitemapindex>
