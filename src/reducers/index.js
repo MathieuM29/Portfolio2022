@@ -12,6 +12,11 @@ const stateInitial = {
   isEmpty: false,
   isSucces: false,
   isActive: false,
+  subjectError: '',
+  nameError: '',
+  mailError: '',
+  messageError: '',
+
 };
 
 export default (state = stateInitial, action = {}) => {

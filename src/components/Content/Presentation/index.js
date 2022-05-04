@@ -22,7 +22,7 @@ const Presentation = () => {
 
     <div className="presentation__contact">
       <div className="presentation__contact__btn">
-        <a className="presentation__contact--cv" href="/src/assets/cv2022.pdf" title="Lien pour télécharger mon cv" download target="_blank">Télecharger mon cv</a>
+        <a className="presentation__contact--cv" href="https://mathieumarc.surge.sh/cv2022.pdf" title="Lien pour télécharger mon cv" download target="_blank">Télecharger mon cv</a>
       </div>
       <div className="presentation__contact__btn">
         <a className="presentation__contact--contact" title="Lien vers mon profil GitHub" href="#contact">Contactez-moi</a>

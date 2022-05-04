@@ -3,41 +3,89 @@ import './styles.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { changeInputValue, checkIfEmpty, checkIfSucces } from 'src/actions';
+import emailjs from 'emailjs-com';
 import Succes from './Succes';
 import Error from './Error';
 
 // == Composant
 const Contact = () => {
   const dispatch = useDispatch();
-  const { nameForm, mailForm, messageForm, isEmpty, isSucces } = useSelector((state) => state);
 
-  const classnames = isEmpty ? 'contact__form--input--empty' : 'contact__form--input';
-  // classnames = isSucces ? 'contact__form--input--succes' : 'contact__form--input';
-  // const classnames = (isEmpty ? isSucces ? 'contact__form--input--empty' : 'contact__form--input--succes' : 'contact__form--input');
+  const { nameForm,
+    mailForm,
+    messageForm,
+    subjectForm,
+    isEmpty,
+    isSucces,
+    subjectError,
+    nameError,
+    mailError,
+    messageError } = useSelector((state) => state);
+
+  const classnames = isEmpty ? 'contact__form__label--input--empty' : 'contact__form__label--input';
   
   const handleInputChange = (e) => {
     dispatch(changeInputValue(e.target.value, e.target.name));
     console.log(e.target.value, e.target.name);
   };
 
-  const checkInput = () => {
-    if (!nameForm, !mailForm, !messageForm) {
-      dispatch(checkIfEmpty());
-    } 
-    else {
+  // const checkInput = () => {
+  //   if (!nameForm || !subjectForm || !mailForm || !messageForm) {
+  //     dispatch(checkIfEmpty());
+  //   } 
+    // else if (nameForm || subjectForm || mailForm || messageForm) {
+    //   dispatch(checkIfSucces());
+    //   console.log('done');
+
+    //   setTimeout(() => {
+    //     dispatch(checkIfSucces());
+    //   }, 3000);
+    // }
+  // };
+
+  const validate = () => {
+
+    // let subjectError = '';
+    // let nameError = '';
+    // let mailError = '';
+    // let messageError = '';
+
+    // if (!mailForm) {
+
+    //   mailError = 'invalid email';
+    //   return mailError;
+    // }
       dispatch(checkIfSucces());
       console.log('done');
 
       setTimeout(() => {
         dispatch(checkIfSucces());
       }, 3000);
-    }
+    ;
+
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log('submit', nameForm, mailForm, messageForm);
-    checkInput();
+
+    emailjs.sendForm('gmail', 'template_portfolio', e.target, 'UG9tgDVMjnAuQEz2G')
+      .then((result) => {
+        // validate();
+        console.log('Envoi', result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+
+    console.log('submit', subjectForm, nameForm, mailForm, messageForm);
+    // checkInput();
+    validate();
+    // const isValid = validate();
+
+    // if (isValid) {
+
+    //   console.log('validé');
+    // }
   };
 
   return (
@@ -69,11 +117,34 @@ const Contact = () => {
       <div className="contact__title--border">
         <h2 className="contact__title--text"><span>Contactez</span> moi</h2>
       </div>
-      <form className="contact__form" onSubmit={handleSubmit}>
-        {isEmpty && <Error />}
-        <input className={classnames} type="text" value={nameForm} name="nameForm" placeholder="Nom complet" onChange={handleInputChange} />
-        <input className={classnames} type="text" value={mailForm} name="mailForm" placeholder="Adresse e-mail" onChange={handleInputChange} />
-        <input className={classnames} type="textarea" value={messageForm} name="messageForm" placeholder="Votre message" onChange={handleInputChange} />
+      <form className="contact__form" onSubmit={sendEmail}>
+        {/* {isEmpty && <Error />} */}
+        {/* {subjectError ? (<div className="contact__form--error">{subjectError}</div>) : null} */}
+        <label className="contact__form__label" htmlFor="subject">
+          Sujet
+          <input className={classnames} type="text" value={subjectForm} id="subject" name="subject" onChange={handleInputChange} />
+        </label>
+        
+        {/* {isEmpty && <Error />} */}
+        {/* {nameError ? (<div className="contact__form--error">{nameError}</div>) : null} */}
+        <label className="contact__form__label" htmlFor="name">
+          Nom complet
+          <input className={classnames} type="text" value={nameForm} id="name" name="name" onChange={handleInputChange} />
+        </label>
+        
+        {/* {isEmpty && <Error />} */}
+        {/* {mailError ? (<div className="contact__form--error">{mailError}</div>) : null} */}
+        <label className="contact__form__label" htmlFor="mail">
+          Adresse email
+          <input className={classnames} type="text" value={mailForm} id="mail" name="mail" onChange={handleInputChange} />
+        </label>
+        
+        {/* {isEmpty && <Error />} */}
+        {/* {messageError ? (<div className="contact__form--error">{messageError}</div>) : null} */}
+        <label className="contact__form__label" htmlFor="message">
+          Message
+          <input className={classnames} type="text" value={messageForm} id="message" name="message" onChange={handleInputChange} />
+        </label>
         <button className="contact__form--btn" type="submit">Envoyer</button>
       </form>
       {isSucces && <Succes />}

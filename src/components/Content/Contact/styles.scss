@@ -99,80 +99,93 @@
         padding: 1.4em;
         width: 100%;
 
-        &--input {
-
-          width: 100%;
-          border: 2px solid v.$third-color;
-          margin-bottom: 2em;
-          padding: 1.2em;
-          color: v.$secondary-color;
-          transition: 0.5s;
-          font-weight: 700;
-        }
-
-        &--input--empty {
-
+        &--error {
           
+          margin: 10px 0;
+          color: red;
+          font-size: calc(v.$font-size / 1.1); 
+        }
+
+        &__label {
+
           width: 100%;
-          border: 2px solid red;
-          margin-bottom: 2em;
-          padding: 1.2em;
-          color: v.$secondary-color;
-          transition: 0.5s;
-          font-weight: 700;   
-        }
+          font-size: calc(v.$font-size / 1); 
 
-        &--input--succes {
+          &--input {
 
-          
-          width: 100%;
-          border: 2px solid v.$secondary-color;
-          margin-bottom: 2em;
-          padding: 1.2em;
-          color: v.$secondary-color;
-          transition: 0.5s;
-          font-weight: 700;   
-        }
-
-        &--input:focus {
-
-          border: 2px solid v.$secondary-color;
-        }
-
-        &--input::placeholder {
-
-          font-size: calc(v.$font-size / 1);
-          color: #444;
-          font-weight: normal;
-        }
-
-        &--input--empty::placeholder {
-
-          font-size: calc(v.$font-size / 1);
-          color: #444;
-          font-weight: normal;
-        }
-
-        &--input--succes::placeholder {
-
-          font-size: calc(v.$font-size / 1);
-          color: #444;
-          font-weight: normal;
-        }
-
-        &--input[type="textarea"] {
-
-          height: 100px; 
-        }
-
-        &--input--empty[type="textarea"] {
-
-          height: 100px; 
-        }
-
-        &--input--succes[type="textarea"] {
-
-          height: 100px; 
+            width: 100%;
+            border: 2px solid v.$third-color;
+            margin-bottom: 2em;
+            padding: 1.2em;
+            color: v.$secondary-color;
+            transition: 0.5s;
+            font-weight: 700;
+          }
+  
+          &--input--empty {
+  
+            
+            width: 100%;
+            border: 2px solid red;
+            margin-bottom: 2em;
+            padding: 1.2em;
+            color: v.$secondary-color;
+            transition: 0.5s;
+            font-weight: 700;   
+          }
+  
+          &--input--succes {
+  
+            
+            width: 100%;
+            border: 2px solid v.$secondary-color;
+            margin-bottom: 2em;
+            padding: 1.2em;
+            color: v.$secondary-color;
+            transition: 0.5s;
+            font-weight: 700;   
+          }
+  
+          &--input:focus {
+  
+            border: 2px solid v.$secondary-color;
+          }
+  
+          &--input::placeholder {
+  
+            font-size: calc(v.$font-size / 1);
+            color: #444;
+            font-weight: normal;
+          }
+  
+          &--input--empty::placeholder {
+  
+            font-size: calc(v.$font-size / 1);
+            color: #444;
+            font-weight: normal;
+          }
+  
+          &--input--succes::placeholder {
+  
+            font-size: calc(v.$font-size / 1);
+            color: #444;
+            font-weight: normal;
+          }
+  
+          &--input[type="textarea"] {
+  
+            height: 100px; 
+          }
+  
+          &--input--empty[type="textarea"] {
+  
+            height: 100px; 
+          }
+  
+          &--input--succes[type="textarea"] {
+  
+            height: 100px; 
+          }
         }
 
         &--btn {
