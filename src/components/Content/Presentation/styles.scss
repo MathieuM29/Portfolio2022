@@ -77,8 +77,8 @@
       
       &__btn {
 
-        border-image: linear-gradient(to bottom, v.$third-color, rgba(0, 0, 0, 0)) 1 100%;
-        border-left: 1px solid v.$third-color; 
+        // border-image: linear-gradient(to bottom, v.$third-color, rgba(0, 0, 0, 0)) 1 100%;
+        // border-left: 1px solid v.$third-color; 
         width: 50%;
         height: 100%;
         @include flex($direction: row, $justify: center, $align: center);

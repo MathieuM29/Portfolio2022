@@ -16,17 +16,14 @@ const Presentation = () => {
     </div>
 
     <div className="presentation__social">
-      <a href="https://github.com/MathieuM29" title="Lien vers mon profil GitHub"><i className="fa-brands fa-github presentation__social--github"></i></a>
-      <a href="https://twitter.com/marcmathieu29" title="Lien vers mon profil Twitter"><i className="fa-brands fa-twitter presentation__social--twitter"></i></a>
+      <a href="https://github.com/MathieuM29" title="Lien vers mon profil GitHub" target="_blank"><i className="fa-brands fa-github presentation__social--github"></i></a>
+      <a href="https://twitter.com/marcmathieu29" title="Lien vers mon profil Twitter" target="_blank"><i className="fa-brands fa-twitter presentation__social--twitter"></i></a>
     </div>
 
     <div className="presentation__contact">
       <div className="presentation__contact__btn">
-        <a className="presentation__contact--cv" href="https://mathieumarc.surge.sh/cv2022.pdf" title="Lien pour télécharger mon cv" download target="_blank">Télecharger mon cv</a>
-      </div>
-      <div className="presentation__contact__btn">
-        <a className="presentation__contact--contact" title="Lien vers mon profil GitHub" href="#contact">Contactez-moi</a>
-      </div>    
+        <a className="presentation__contact--cv" href="cv2022.pdf" title="Lien pour télécharger mon cv" download target="_blank">Télecharger mon cv</a>
+      </div>   
     </div>
   </section>
   );
