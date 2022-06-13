@@ -10,6 +10,561 @@
 //desktop version
 
 //tablet version
+@media screen and (min-width: 421px) and (max-width: 1024px) {
+
+  .resume {
+
+    height: 80%;
+    width: 100%;
+    background-color: v.$primary-color;
+    @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  
+    &__xp {
+
+      &__title {
+
+        width: 100%;
+        padding: 1.4em 0;
+        border-bottom: 1px solid v.$third-color;
+  
+        &--text {
+  
+          padding: 0 1.4em;
+          font-size: calc(v.$font-size / 0.8);
+          font-weight: 700;
+        }
+  
+        &--text span {
+  
+          color: v.$secondary-color;
+        }
+      }
+  
+      &__subTitle {
+  
+        width: 100%;
+        padding: 1.6em 1.4em;
+        border-bottom: 1px solid v.$third-color;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+  
+        &--icon {
+  
+          font-size: calc(v.$font-size / 0.7);
+          color: v.$secondary-color;
+          margin-right: 0.5em;
+        }
+  
+        &--text {
+  
+          font-size: calc(v.$font-size / 0.9);
+        }
+      }
+  
+      &__infos {
+  
+        @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  
+        &__card {
+  
+          @include flex($direction: column, $justify: flex-start, $align: flex-start);
+          border-bottom: 1px solid v.$third-color;
+          border-image: linear-gradient(100deg, v.$third-color, white) 1;
+          padding: 1.4em;
+  
+          &--year {
+  
+            border-radius: 3px;
+            border: 1px solid v.$secondary-color;
+            padding: 0.1em;
+            color: v.$secondary-color;
+          }
+  
+          &--post {
+  
+            font-size: calc(v.$font-size / 0.9);
+            font-weight: 700;
+            margin: 1em 0;
+          }
+  
+          &--company {
+  
+            margin: -0.5em 0 1em 0;
+            color: #222;
+          }
+  
+          &--desc {
+  
+            font-size: calc(v.$font-size / 1);
+            line-height: 1.8;
+  
+          }
+  
+          &--subDesc {
+  
+            font-size: calc(v.$font-size / 1);
+            line-height: 1.8;
+            margin-top: 1em;
+  
+          }
+  
+          &--subDesc span {
+  
+            font-size: calc(v.$font-size / 1.1);
+  
+          }
+  
+          &__projects {
+  
+            @include flex($direction: row, $justify: flex-start, $align: center);
+            width: 100%;
+            margin-top: 1.2em;
+  
+            &--link {
+  
+              font-size: calc(v.$font-size / 1.2);
+              padding: 0.9em;
+              background-color: v.$secondary-color;
+              border-radius: 3px;
+              margin-right: 1.2em;
+              color: v.$primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &__school {
+
+      &__title {
+
+        width: 100%;
+        padding: 1.4em 0;
+        border-bottom: 1px solid v.$third-color;
+  
+        &--text {
+  
+          padding: 0 1.4em;
+          font-size: calc(v.$font-size / 0.9);
+          font-weight: 700;
+        }
+  
+        &--text span {
+  
+          color: v.$secondary-color;
+        }
+      }
+  
+      &__subTitle {
+  
+        width: 100%;
+        padding: 1.6em 1.4em;
+        border-bottom: 1px solid v.$third-color;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+  
+        &--icon {
+  
+          font-size: calc(v.$font-size / 0.7);
+          color: v.$secondary-color;
+          margin-right: 0.5em;
+        }
+  
+        &--text {
+  
+          font-size: calc(v.$font-size / 0.9);
+        }
+      }
+  
+      &__infos {
+  
+        @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  
+        &__card {
+  
+          @include flex($direction: column, $justify: flex-start, $align: flex-start);
+          border-bottom: 1px solid v.$third-color;
+          border-image: linear-gradient(100deg, v.$third-color, white) 1;
+          padding: 1.4em;
+  
+          &--year {
+  
+            border-radius: 3px;
+            border: 1px solid v.$secondary-color;
+            padding: 0.1em;
+            color: v.$secondary-color;
+          }
+  
+          &--post {
+  
+            font-size: calc(v.$font-size / 0.9);
+            font-weight: 700;
+            margin: 1em 0;
+          }
+
+          &--desc {
+  
+            font-size: calc(v.$font-size / 1);
+            line-height: 1.8;
+          }
+ 
+          &__desc {
+  
+            font-size: calc(v.$font-size / 1);
+            line-height: 1.8;
+
+            &--text {
+  
+              font-size: calc(v.$font-size / 1);
+              line-height: 1.8;
+            }
+
+            &__front {
+
+              // border: 1px solid black;
+              margin-top: 1.1em;
+
+              &--title {
+
+                font-size: calc(v.$font-size / 1);
+                font-weight: 700;
+              }
+
+              &__list {
+
+                @include flex($direction: row, $justify: flex-start, $align: center);
+                flex-wrap: wrap;
+
+                &--item {
+
+                  font-size: calc(v.$font-size / 1.1);
+                  margin-right: 1.2em;
+                  // list-style-type: square;
+                }
+              }
+            }
+
+            &__back {
+
+              // border: 1px solid black;
+              margin-top: 1.1em;
+
+              &--title {
+
+                font-size: calc(v.$font-size / 1);
+                font-weight: 700;
+              }
+
+              &__list {
+
+                @include flex($direction: row, $justify: flex-start, $align: center);
+                flex-wrap: wrap;
+
+                &--item {
+
+                  font-size: calc(v.$font-size / 1.1);
+                  margin-right: 1.2em;
+                  // list-style-type: square;
+                }
+              }
+            }
+
+            &__trans {
+
+              // border: 1px solid black;
+              margin-top: 1.1em;
+
+              &--title {
+
+                font-size: calc(v.$font-size / 1);
+                font-weight: 700;
+              }
+
+              &__list {
+
+                @include flex($direction: row, $justify: flex-start, $align: center);
+                flex-wrap: wrap;
+
+                &--item {
+
+                  font-size: calc(v.$font-size / 1.1);
+                  margin-right: 1.2em;
+                  // list-style-type: square;
+                }
+              }
+            }
+
+            &__design {
+
+              // border: 1px solid black;
+              margin-top: 1.1em;
+
+              &--title {
+
+                font-size: calc(v.$font-size / 1);
+                font-weight: 700;
+              }
+
+              &__list {
+
+                @include flex($direction: row, $justify: flex-start, $align: center);
+                flex-wrap: wrap;
+
+                &--item {
+
+                  font-size: calc(v.$font-size / 1.1);
+                  margin-right: 1.2em;
+                  // list-style-type: square;
+                }
+              }
+            }
+          }
+
+          &--company {
+  
+            margin: -0.5em 0 1em 0;
+            color: #222;
+          }
+
+          &__projects {
+  
+            @include flex($direction: row, $justify: flex-start, $align: center);
+            width: 100%;
+            margin-top: 1.2em;
+  
+            &--link {
+  
+              font-size: calc(v.$font-size / 1.2);
+              padding: 0.9em;
+              background-color: v.$secondary-color;
+              border-radius: 3px;
+              margin-right: 1.2em;
+              color: v.$primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &__skills {
+
+      width: 100%;
+
+      &__title {
+
+        width: 100%;
+        padding: 1.4em 0;
+        border-bottom: 1px solid v.$third-color;
+  
+        &--text {
+  
+          padding: 0 1.4em;
+          font-size: calc(v.$font-size / 0.8);
+          font-weight: 700;
+        }
+  
+        &--text span {
+  
+          color: v.$secondary-color;
+        }
+      }
+  
+      &__subTitle {
+  
+        width: 100%;
+        padding: 1.6em 1.4em;
+        border-bottom: 1px solid v.$third-color;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+  
+        &--icon {
+  
+          font-size: calc(v.$font-size / 0.7);
+          color: v.$secondary-color;
+          margin-right: 0.5em;
+        }
+  
+        &--text {
+  
+          font-size: calc(v.$font-size / 0.9);
+        }
+      }
+
+      &__content {
+
+        padding: 1.4em;
+        width: 100%;
+        @include flex($direction: row, $justify: space-around, $align: center);
+        flex-wrap: wrap;
+
+        &__item {
+
+          min-width: 30%;
+          max-width: 30%;
+          padding: 0.5em;
+          border-radius: 3px;
+          @include flex($direction: column, $justify: center, $align: center);
+          // height: 50%;
+          background-color: v.$secondary-color;
+          margin: 0 0 0.8em 0;
+
+          &--icon {
+
+            font-size: calc(v.$font-size / 0.6);
+            color: v.$primary-color;
+            margin-bottom: 0.2em;
+
+          }
+
+          &--title {
+
+            color: v.$primary-color;
+            font-size: calc(v.$font-size / 1.3);
+          }
+        }
+
+      }
+    }
+
+    &__design{
+
+      width: 100%;
+
+      &__title {
+
+        width: 100%;
+        padding: 1.4em 0;
+        border-bottom: 1px solid v.$third-color;
+  
+        &--text {
+  
+          padding: 0 1.4em;
+          font-size: calc(v.$font-size / 0.8);
+          font-weight: 700;
+        }
+  
+        &--text span {
+  
+          color: v.$secondary-color;
+        }
+      }
+  
+      &__subTitle {
+  
+        width: 100%;
+        padding: 1.6em 1.4em;
+        border-top: 1px solid v.$third-color;
+        border-bottom: 1px solid v.$third-color;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+  
+        &--icon {
+  
+          font-size: calc(v.$font-size / 0.6);
+          color: v.$secondary-color;
+          margin-right: 0.5em;
+        }
+  
+        &--text {
+  
+          font-size: calc(v.$font-size / 0.9);
+        }
+      }
+
+      &__content {
+
+        padding: 1.4em;
+        width: 100%;
+        @include flex($direction: row, $justify: space-around, $align: center);
+        flex-wrap: wrap;
+
+        &__item {
+
+          min-width: 30%;
+          max-width: 30%;
+          padding: 0.5em;
+          border-radius: 3px;
+          @include flex($direction: column, $justify: center, $align: center);
+          // height: 50%;
+          background-color: v.$secondary-color;
+          margin: 0 0 0.8em 0;
+
+          &--icon {
+
+            // font-size: calc(v.$font-size / 0.6);
+            width: 25%;
+            // color: v.$primary-color;
+            margin-bottom: 0.2em;
+
+          }
+
+          &--title {
+
+            color: v.$primary-color;
+            font-size: calc(v.$font-size / 1.3);
+          }
+        }
+
+        &__item:last-child {
+
+          margin-left: -107px;
+        }
+
+      }
+    }
+
+    &__language {
+
+      width: 100%;
+
+      &__title {
+
+        width: 100%;
+        padding: 1.4em 0;
+        border-bottom: 1px solid v.$third-color;
+  
+        &--text {
+  
+          padding: 0 1.4em;
+          font-size: calc(v.$font-size / 0.8);
+          font-weight: 700;
+        }
+  
+        &--text span {
+  
+          color: v.$secondary-color;
+        }
+      }
+  
+      &__subTitle {
+  
+        width: 100%;
+        padding: 1.6em 1.4em;
+        border-top: 1px solid v.$third-color;
+        border-bottom: 1px solid v.$third-color;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+  
+        &--icon {
+  
+          font-size: calc(v.$font-size / 0.6);
+          color: v.$secondary-color;
+          margin-right: 0.5em;
+        }
+  
+        &--text {
+  
+          font-size: calc(v.$font-size / 0.9);
+        }
+      }
+
+      &__languages {
+
+        padding: 1.4em;
+
+        &__french {
+
+          margin-bottom: 1.2em;
+        }
+      }
+    }
+  }
+}
 
 //mobil version
 @media screen and (min-width: 320px) and (max-width: 420px) {

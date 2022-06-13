@@ -8,6 +8,54 @@
 }
 
 //desktop version
+.menu {
+
+  height: 50%;
+  width: 100%;
+  background-color: v.$primary-color;
+  @include flex($direction: row, $justify: flex-start, $align: center);
+  // border-image: linear-gradient(to right, grey, rgba(0, 0, 0, 0)) 1 100%;
+  border-top: 1px solid v.$third-color;
+  // border-bottom: 1px solid black;
+
+  &__item {
+
+    width: 20%;
+    height: 100%;
+    padding: 1em 0;
+    font-size: calc(v.$font-size / 1.3);
+    text-align: center;
+    @include flex($direction: column, $justify: center, $align: center);
+    border-image: linear-gradient(to bottom, v.$third-color, rgba(0, 0, 0, 0)) 1 100%;
+    border-left: 1px solid v.$third-color;
+    
+    text-transform: uppercase;
+
+    &--icon {
+
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    &--icon:active {
+
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: v.$secondary-color;
+    }
+  }
+
+  &__item:first-child {
+
+    border-left: none;
+  }
+
+  &__item:focus {
+
+    color: v.$secondary-color;
+  }
+
+}
 
 //tablet version
 
@@ -64,5 +112,4 @@
   }
 
 }
-
 

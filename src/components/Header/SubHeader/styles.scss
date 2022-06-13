@@ -8,6 +8,27 @@
 }
 
 //desktop version
+.subHeader {
+
+  height: 40%;
+  width: 100%;
+  background-color: v.$primary-color;
+  @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  padding: 1em;
+
+  &--name {
+
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &--job {
+
+    font-size: calc(v.$font-size / 1.1);
+    color: v.$secondary-color;
+  }
+
+}
 
 //tablet version
 
@@ -36,5 +57,4 @@
   
   }
 }
-
 
