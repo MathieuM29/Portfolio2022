@@ -10,10 +10,10 @@
 //desktop version
 .menu {
 
-  height: 50%;
-  width: 100%;
+  height: 100%;
+  width: 15%;
   background-color: v.$primary-color;
-  @include flex($direction: row, $justify: flex-start, $align: center);
+  @include flex($direction: column, $justify: flex-start, $align: center);
   // border-image: linear-gradient(to right, grey, rgba(0, 0, 0, 0)) 1 100%;
   border-top: 1px solid v.$third-color;
   // border-bottom: 1px solid black;

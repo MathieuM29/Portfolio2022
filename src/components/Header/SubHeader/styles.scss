@@ -37,11 +37,11 @@
 
   .subHeader {
 
-    height: 40%;
+    height: 50%;
     width: 100%;
     background-color: v.$primary-color;
     @include flex($direction: column, $justify: flex-start, $align: flex-start);
-    padding: 1em;
+    padding: 1.5em;
 
     &--name {
 

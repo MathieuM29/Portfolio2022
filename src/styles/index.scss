@@ -15,6 +15,10 @@ body {
   width: 100vw;
   background-color: grey;
   @include flex($direction: row, $justify: center, $align: center);
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
   // background: linear-gradient(98deg, rgba(34,139,34,1) 60%, rgba(255,255,255,1) 100%);
   // background: linear-gradient(11deg, rgba(34, 139, 34,1) 0%, rgba(51,217,51,1) 100%), no-repeat;
   // background-size: 400% 400%;
@@ -22,11 +26,15 @@ body {
   
 }
 
-.root {
+#root {
 
   height: 90%;
   width: 90%;
   @include flex($direction: row, $justify: center, $align: center);
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
   // background: linear-gradient(98deg, rgba(34,139,34,1) 60%, rgba(255,255,255,1) 100%);
   // background: linear-gradient(11deg, rgba(34, 139, 34,1) 0%, rgba(51,217,51,1) 100%), no-repeat;
   // background-size: 400% 400%;
@@ -40,13 +48,16 @@ body {
     font-family: v.$font;
     height: 100vh;
     width: 100vw;
-    
+    background-color: transparent;
+    // @include flex($direction: column, $justify: flex-start, $align: center);
+    // display: block;
   }
 
-  .root {
+  #root {
 
     height: 100%;
     width: 100%;
-    
+    // @include flex($direction: column, $justify: flex-start, $align: center);
+    // display: block;
   }
 }
