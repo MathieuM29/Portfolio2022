@@ -10,10 +10,10 @@
 //desktop version
 .header {
 
-  height: 100%;
-  width: 50%;
-  background-color: v.$primary-color;
-  @include flex($direction: column, $justify: flex-start, $align: center);
+  height: 80%;
+  width: 6%;
+  background-color: transparent;
+  @include flex($direction: column, $justify: flex-start, $align: flex-end);
   // position: sticky;
   // top: 0;
   // z-index: 999;

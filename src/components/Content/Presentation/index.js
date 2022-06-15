@@ -1,6 +1,6 @@
 // == Import
 import './styles.scss';
-import profil_picture from 'src/assets/images/profil_picture.jpg';
+import profil_picture from 'src/assets/images/profil_picture_resize.jpg';
 // == Composant
 const Presentation = () => {
 

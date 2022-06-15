@@ -15,7 +15,7 @@ const Resume = () => {
   <section className="resume">
     <div className="resume__xp">
       <div className="resume__xp__title">
-        <h2 className="resume__xp__title--text"><span>Expériences</span> et formation</h2>
+        <h2 className="resume__xp__title--text"><span>Expériences</span> et formations</h2>
       </div> 
       <div className="resume__xp__subTitle">
         <i className="fa-solid fa-briefcase resume__xp__subTitle--icon"></i>
@@ -27,7 +27,7 @@ const Resume = () => {
           <p className="resume__xp__infos__card--post">Développeur web en formation</p>
           <p className="resume__xp__infos__card--company">Apothéose - Ecole O'clock</p>
           <p className="resume__xp__infos__card--desc">Projet réalisé en groupe en fin de formation.</p>
-          <p className="resume__xp__infos__card--subDesc">Création d'un site web : <br /><span>(voir détails à la page Works)</span></p>
+          <p className="resume__xp__infos__card--subDesc">Création d'un site web : <br /><span>(voir détails à la page Projets)</span></p>
           <div className="resume__xp__infos__card__projects">
             <a className="resume__xp__infos__card__projects--link" title="Projet Playtogether" href="https://playtogether.surge.sh/">PlayTogether</a>
           </div>
@@ -36,8 +36,8 @@ const Resume = () => {
           <p className="resume__xp__infos__card--year">2019</p>
           <p className="resume__xp__infos__card--post">Intégrateur web</p>
           <p className="resume__xp__infos__card--company">Eskem studio</p>
-          <p className="resume__xp__infos__card--desc">Stage de 2 mois réalisé dans le cadre de la formation "Développeur d'applications multimédias" a l'école Web Digital School.</p>
-          <p className="resume__xp__infos__card--subDesc">Création de deux projets de sites web : <br /><span>(voir détails à la page Works)</span></p>
+          <p className="resume__xp__infos__card--desc">Stage de 2 mois réalisé dans le cadre de la formation "Développeur d'applications multimédias" à l'école Web Digital School.</p>
+          <p className="resume__xp__infos__card--subDesc">Création de deux projets de sites web : <br /><span>(voir détails à la page Projets)</span></p>
           <div className="resume__xp__infos__card__projects">
             <a className="resume__xp__infos__card__projects--link" title="Projet Cours photo Brest" href="https://www.cours-photo-brest.fr/">Cours photos Brest</a>
             <a className="resume__xp__infos__card__projects--link" title="Projet L'Aod Ouessant" href="https://www.aod-ouessant.fr/">L'Aod Ouessant</a>
@@ -53,10 +53,10 @@ const Resume = () => {
       </div>
       <div className="resume__school">
         <div className="resume__school__infos__card">
-          <p className="resume__school__infos__card--year">2022 - en cours</p>
+          <p className="resume__school__infos__card--year">2022</p>
           <p className="resume__school__infos__card--post">Certification "Maîtrise de la qualité en projet web"</p>
           <p className="resume__xp__infos__card--company">OPQUAST</p>
-          <p className="resume__school__infos__card--desc">Apprentissage des règles et recommandations des bonnes pratiques du web et familiarisation des différents métiers.</p>
+          <p className="resume__school__infos__card--desc">Apprentissage des règles et recommandations des bonnes pratiques du web et familiarisation des différents métiers intervenants sur un projet web. Prise en compte de l'expérience utilisateur (UX) et de l'accessibilité.</p>
           <div className="resume__school__infos__card__projects">
             <a className="resume__school__infos__card__projects--link" title="Certification Maitrise de la qualité en projet web - OPQUAST" href="https://www.opquast.com/">OPQUAST</a>
           </div>
@@ -66,7 +66,7 @@ const Resume = () => {
           <p className="resume__school__infos__card--post">Développeur JavaScript fullstack</p>
           <p className="resume__xp__infos__card--company">Ecole O'clock</p>
           <div className="resume__school__infos__card__desc">
-            <p className="resume__school__infos__card__desc--text">Formation intensive de 5 mois sur la technologie JavaScript et ses frameworks. Projet de fin de formation réalisé en groupe avec démonstration en live sur Youtube.</p>
+            <p className="resume__school__infos__card__desc--text">Formation intensive de 5 mois sur la technologie JavaScript et sa librairie React. Projet de fin de formation réalisé en groupe avec démonstration en live sur Youtube.</p>
             <div className="resume__school__infos__card__desc__front">
               <h3 className="resume__school__infos__card__desc__front--title">Front-end</h3>
               <ul className="resume__school__infos__card__desc__front__list">
@@ -112,8 +112,7 @@ const Resume = () => {
                 <li className="resume__school__infos__card__desc__trans__list--item">Terminal Linux</li>
                 <li className="resume__school__infos__card__desc__trans__list--item">GitHub</li>
                 <li className="resume__school__infos__card__desc__trans__list--item">BEM</li>
-                <li className="resume__school__infos__card__desc__trans__list--item">Surge</li>
-                <li className="resume__school__infos__card__desc__trans__list--item">AWS</li>              
+                <li className="resume__school__infos__card__desc__trans__list--item">Surge</li>              
               </ul>
             </div>
 
