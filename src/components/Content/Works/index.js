@@ -2,8 +2,6 @@
 import './styles.scss';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useRef } from 'react';
-import { saveOffset } from 'src/actions';
 import datas from 'src/data/projects';
 import Work from './Work';
 import Modale from './Modale';
@@ -15,8 +13,6 @@ const Works = () => {
   const { isVisible, currentId } = useSelector((state) => state);
 
   const currentIdDatas = datas.items.filter((data) => currentId === data.id);
-
-  // console.log(currentIdDatas);
 
   const arrayFiltered = (e) => {
 

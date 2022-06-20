@@ -15,7 +15,7 @@ const Footer = () => {
           <li><a href="https://mathieumarc.surge.sh/works" title="Mes projets">Mes projets</a></li>
           <li><a href="https://mathieumarc.surge.sh/contact" title="Me contacter">Me contacter</a></li> 
         </ul> 
-        </li>             
+        </li>
       </ul>
     </div>
   </footer>

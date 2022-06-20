@@ -75,8 +75,6 @@
     
     &__btn {
 
-      // border-image: linear-gradient(to bottom, v.$third-color, rgba(0, 0, 0, 0)) 1 100%;
-      // border-left: 1px solid v.$third-color; 
       width: 50%;
       height: 100%;
       @include flex($direction: row, $justify: center, $align: center);
@@ -88,13 +86,9 @@
         width: 50%;
         
       }
-    }
-
-    
+    } 
   }
 }
-
-//tablet version
 
 //mobil version
 @media screen and (min-width: 320px) and (max-width: 420px) {
@@ -164,8 +158,6 @@
       
       &__btn {
 
-        // border-image: linear-gradient(to bottom, v.$third-color, rgba(0, 0, 0, 0)) 1 100%;
-        // border-left: 1px solid v.$third-color; 
         width: 50%;
         height: 100%;
         @include flex($direction: row, $justify: center, $align: center);
@@ -178,8 +170,6 @@
           
         }
       }
-
-      
     }
   }
 }

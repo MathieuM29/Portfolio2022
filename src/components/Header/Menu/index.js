@@ -15,7 +15,6 @@ const Menu = () => {
   });
 
   const dispatch = useDispatch();
-  // const { isActive } = useSelector((state) => state);
 
   const handleActiveItem = () => {
     const action = isItemActive();

@@ -37,8 +37,7 @@
 
   &__name {
 
-    font-size: calc(v.$font-size / 0.8);
-    
+    font-size: calc(v.$font-size / 0.8);  
   }
 
   &__category {
@@ -47,14 +46,6 @@
   }
 
 }
-
-// .work:last-child {
-
-//   margin-bottom: 10px !important;
-// }
-
-//tablet version
-
 
 //mobil version
 @media screen and (min-width: 320px) and (max-width: 420px) {
@@ -88,15 +79,12 @@
     &__name {
 
       font-size: calc(v.$font-size / 0.8);
-      
     }
 
     &__category {
 
       color: #222;
     }
-
-  
   }
 }
 

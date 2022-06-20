@@ -18,9 +18,8 @@
   margin-right: auto;
   background-color: v.$secondary-color;
   color: v.$primary-color;
+  animation: fade 0.3s ease-out;
 }
-
-//tablet version
 
 //mobil version
 @media screen and (min-width: 320px) and (max-width: 420px) {
@@ -38,4 +37,18 @@
   }
 }
 
+@keyframes fade {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 

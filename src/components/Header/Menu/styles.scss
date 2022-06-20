@@ -67,12 +67,9 @@
     background-color: v.$primary-color;
     @include flex($direction: row, $justify: flex-start, $align: center);
     border-top: 1px solid v.$third-color;
-    // border-bottom: 1px solid v.$third-color;
-    // border-image: linear-gradient(28deg,#dcdcdc,#fff) 1;
     border-radius: 0px;
     margin-right: 0;
     
-
     &__item {
 
       width: 20%;

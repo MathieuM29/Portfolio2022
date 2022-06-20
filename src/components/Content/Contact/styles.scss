@@ -51,7 +51,6 @@
 
   &__map {
 
-    // height: 50%;
     width: 85%;
     margin: 1.4em 0;
 
@@ -199,194 +198,6 @@
    }
 }
 
-//tablet version
-@media screen and (min-width: 421px) and (max-width: 1024px) {
-
-  .contact {
-
-    height: 80%;
-    width: 100%;
-    background-color: v.$primary-color;
-    @include flex($direction: column, $justify: flex-start, $align: center);
-    position: relative;
-
-    &__title {
-
-      width: 100%;
-      padding: 1.4em 0;
-      border-bottom: 1px solid v.$third-color;
-
-      &--border {
-
-        width: 100%;
-        padding: 1.4em 0;
-        border-top: 1px solid v.$third-color;
-        border-bottom: 1px solid v.$third-color;
-      }
-
-      &--text {
-
-        padding: 0 1.4em;
-        font-size: calc(v.$font-size / 0.8);
-        font-weight: 700;
-      }
-
-      &--text span {
-
-        color: v.$secondary-color;
-      }
-    }
-
-    &__map {
-
-      // height: 50%;
-      width: 85%;
-      margin: 1.4em 0;
-
-      &--style {
-
-        height: 250px;
-        width: 100%;
-      }
-    }
-
-    &__infos {
-
-      @include flex($direction: column, $justify: space-around, $align: flex-start);
-      padding: 0 1.4em;
-      width: 100%;
-      // height: 50%;
-  
-      &__container {
-  
-        @include flex($direction: row, $justify: space-between, $align: center);
-        width: 100%;
-        margin: 0.5em 0;
-        padding: 1em 0;
-        border-bottom: 1px solid v.$third-color;
-        border-image: linear-gradient(100deg, v.$third-color, white) 1;
-        
-        &--text {
-  
-          background-color: v.$secondary-color;
-          padding: 0.5em;
-          color: v.$primary-color;
-          border-radius: 3px;
-        }
-      }
-  
-      &__container:last-child {
-  
-        border-bottom: none;
-      }
-     }
-
-     &__form {
-
-        @include flex($direction: column, $justify: space-around, $align: flex-start);
-        padding: 1.4em;
-        width: 100%;
-
-        &--error {
-          
-          margin: 10px 0;
-          color: red;
-          font-size: calc(v.$font-size / 1.1); 
-        }
-
-        &__label {
-
-          width: 100%;
-          font-size: calc(v.$font-size / 1); 
-
-          &--input {
-
-            width: 100%;
-            border: 2px solid v.$third-color;
-            margin-bottom: 2em;
-            padding: 1.2em;
-            color: v.$secondary-color;
-            transition: 0.5s;
-            font-weight: 700;
-          }
-  
-          &--input--empty {
-  
-            
-            width: 100%;
-            border: 2px solid red;
-            margin-bottom: 2em;
-            padding: 1.2em;
-            color: v.$secondary-color;
-            transition: 0.5s;
-            font-weight: 700;   
-          }
-  
-          &--input--succes {
-  
-            
-            width: 100%;
-            border: 2px solid v.$secondary-color;
-            margin-bottom: 2em;
-            padding: 1.2em;
-            color: v.$secondary-color;
-            transition: 0.5s;
-            font-weight: 700;   
-          }
-  
-          &--input:focus {
-  
-            border: 2px solid v.$secondary-color;
-          }
-  
-          &--input::placeholder {
-  
-            font-size: calc(v.$font-size / 1);
-            color: #444;
-            font-weight: normal;
-          }
-  
-          &--input--empty::placeholder {
-  
-            font-size: calc(v.$font-size / 1);
-            color: #444;
-            font-weight: normal;
-          }
-  
-          &--input--succes::placeholder {
-  
-            font-size: calc(v.$font-size / 1);
-            color: #444;
-            font-weight: normal;
-          }
-  
-          &--input[type="textarea"] {
-  
-            height: 100px; 
-          }
-  
-          &--input--empty[type="textarea"] {
-  
-            height: 100px; 
-          }
-  
-          &--input--succes[type="textarea"] {
-  
-            height: 100px; 
-          }
-        }
-
-        &--btn {
-
-          padding: 1.2em 6em;
-          background-color: v.$third-color;
-          border: none;
-          text-transform: uppercase;
-        }
-     }
-  }
-}
-
 //mobil version
 @media screen and (min-width: 320px) and (max-width: 420px) {
 
@@ -427,7 +238,6 @@
 
     &__map {
 
-      // height: 50%;
       width: 85%;
       margin: 1.4em 0;
 
@@ -443,7 +253,6 @@
       @include flex($direction: column, $justify: space-around, $align: flex-start);
       padding: 0 1.4em;
       width: 100%;
-      // height: 50%;
   
       &__container {
   

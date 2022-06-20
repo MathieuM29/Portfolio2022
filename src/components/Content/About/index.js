@@ -13,7 +13,7 @@ const About = () => {
     <div className="about__infos">
       <div className="about__infos__container">
         <p className="about__infos__container--text">Age</p>
-        <p className="about__infos__container--data">29</p>
+        <p className="about__infos__container--data">30</p>
       </div>
       <div className="about__infos__container">
         <p className="about__infos__container--text">Habitation</p>

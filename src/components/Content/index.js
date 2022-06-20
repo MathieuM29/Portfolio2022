@@ -23,7 +23,6 @@ const Content = () => {
       {!isDesktop && <Route path="/" element={<Presentation />} />}
       {!isDesktop && <Route path="/about" element={<About />} />}
       {isDesktop && <Route path="/" element={<About />} />}
-      {/* <Route path="/" element={<About />} /> */}
       <Route path="/resume" element={<Resume />} />
       <Route path="/works" element={<Works />} />
       <Route path="/contact" element={<Contact />} />
