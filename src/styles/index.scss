@@ -13,20 +13,33 @@ body {
   font-family: v.$font;
   height: 100vh;
   width: 100vw;
-  // background-color: v.$third-color;
-  background: linear-gradient(38deg, rgba(32, 178, 170) 0%, rgba(0, 128, 0) 100%), no-repeat;
-  animation: gradient 8s ease infinite;
+  background: linear-gradient(90deg,#228B22,#20B2AA,	#66CDAA);
   background-size: 400% 400%;
-  @include flex($direction: row, $justify: center, $align: center);
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: center;
-  // align-items: center;
-  // background: linear-gradient(98deg, rgba(34,139,34,1) 60%, rgba(255,255,255,1) 100%);
-  // background: linear-gradient(11deg, rgba(34, 139, 34,1) 0%, rgba(51,217,51,1) 100%), no-repeat;
+  // background: linear-gradient(38deg, rgba(32, 178, 170) 0%, rgba(0, 128, 0) 100%), no-repeat;
+  animation: gradient 8s ease infinite;
   // background-size: 400% 400%;
-  // animation: gradient 1s ease infinite;
+  @include flex($direction: row, $justify: center, $align: center);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: v.$third-color v.$secondary-color;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
   
+}
+
+*::-webkit-scrollbar-track {
+  background: v.$third-color;
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: v.$secondary-color;
+  border-radius: 3px;
 }
 
 #root {
@@ -34,15 +47,6 @@ body {
   height: 90%;
   width: 90%;
   @include flex($direction: row, $justify: center, $align: center);
-  
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: center;
-  // align-items: center;
-  // background: linear-gradient(98deg, rgba(34,139,34,1) 60%, rgba(255,255,255,1) 100%);
-  // background: linear-gradient(11deg, rgba(34, 139, 34,1) 0%, rgba(51,217,51,1) 100%), no-repeat;
-  // background-size: 400% 400%;
-  // animation: gradient 1s ease infinite;
 }
 
 @media screen and (min-width: 320px) and (max-width: 420px) {
@@ -53,8 +57,6 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: transparent;
-    // @include flex($direction: column, $justify: flex-start, $align: center);
-    // display: block;
   }
 
   #root {
@@ -77,3 +79,6 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+
+

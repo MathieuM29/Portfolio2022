@@ -14,8 +14,10 @@
   width: 100%;
   background-color: v.$primary-color;
   @include flex($direction: column, $justify: flex-start, $align: center);
-  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   overflow-y: scroll;
+  animation: fadeRight 0.5s ease-out;
 
   &__title {
 
@@ -70,8 +72,8 @@
     @include flex($direction: row, $justify: center, $align: center);
     flex-wrap: wrap;
     padding: 1.4em 1.4em 1.4em 3.4em;
-    min-height: 76%;
-    max-height: 76%;
+    // min-height: 76%;
+    // max-height: 76%;
     max-width: 100%;
   }
 
@@ -148,6 +150,34 @@
       max-width: 100%;
     }
   
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateX(-75%);
+
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+  75% {
+    opacity: 0.5;
+    transform: translateX(-25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
 

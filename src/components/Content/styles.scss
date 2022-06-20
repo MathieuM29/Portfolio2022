@@ -14,7 +14,7 @@
   // max-height: 90%;
   height: 90%;
   width: 60%;
-  background-color: v.$primary-color;
+  background-color: transparent;
   @include flex($direction: column, $justify: flex-start, $align: center);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;

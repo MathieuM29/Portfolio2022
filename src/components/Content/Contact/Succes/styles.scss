@@ -8,6 +8,17 @@
 }
 
 //desktop version
+.succes {
+
+  padding: 1.2em;
+  border-radius: 3px;
+  position: absolute;
+  top: 163%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: v.$secondary-color;
+  color: v.$primary-color;
+}
 
 //tablet version
 
@@ -18,19 +29,12 @@
 
     padding: 1.2em;
     border-radius: 3px;
-    // transition: 2s;
     position: absolute;
-    top: 90%;
-    // left: 25%;
+    top: 169%;
     margin-left: auto;
     margin-right: auto;
     background-color: v.$secondary-color;
     color: v.$primary-color;
-
-    &--text {
-
-
-    }
   }
 }
 

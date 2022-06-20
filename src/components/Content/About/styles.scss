@@ -16,6 +16,7 @@
   @include flex($direction: column, $justify: flex-start, $align: flex-start);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  animation: fadeRight 0.5s ease-out;
 
  &__title {
 
@@ -222,4 +223,31 @@
   }
 }
 
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateX(-75%);
+
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+  75% {
+    opacity: 0.5;
+    transform: translateX(-25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 
