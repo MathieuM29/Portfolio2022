@@ -8,18 +8,22 @@
 }
 
 //desktop version
-.content {
+@media screen and (min-width: 1024px) {
+
+  .content {
   
-  height: 90%;
-  width: 60%;
-  background-color: transparent;
-  @include flex($direction: column, $justify: flex-start, $align: center);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+    height: 90%;
+    width: 60%;
+    background-color: transparent;
+    @include flex($direction: column, $justify: flex-start, $align: center);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 
+
 //mobil version
-@media screen and (min-width: 320px) and (max-width: 420px) {
+@media screen and (max-width: 767px) {
 
   .content {
 
@@ -31,4 +35,16 @@
     border-bottom-right-radius: 0px;
   }
 }
+// @media screen and (min-width: 320px) and (max-width: 420px) {
+
+//   .content {
+
+//     height: 80%;
+//     width: 100%;
+//     background-color: v.$primary-color;
+//     @include flex($direction: column, $justify: flex-start, $align: center);
+//     border-top-right-radius: 0px;
+//     border-bottom-right-radius: 0px;
+//   }
+// }
 

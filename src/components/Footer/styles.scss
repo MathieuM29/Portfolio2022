@@ -8,7 +8,9 @@
 }
 
 //desktop version
-.footer {
+@media screen and (min-width: 1024px) {
+
+  .footer {
 
     height: 20%;
     width: 100%;
@@ -16,9 +18,11 @@
     @include flex($direction: column, $justify: flex-start, $align: center);
     display: none;
   }
+}
+
 
 //mobil version
-@media screen and (min-width: 320px) and (max-width: 420px) {
+@media screen and (max-width: 767px) {
 
   .footer {
 
@@ -29,5 +33,16 @@
     display: none;
   }
 }
+// @media screen and (min-width: 320px) and (max-width: 420px) {
+
+//   .footer {
+
+//     // height: 20%;
+//     width: 100%;
+//     background-color: v.$primary-color;
+//     @include flex($direction: column, $justify: flex-start, $align: center);
+//     display: none;
+//   }
+// }
 
 

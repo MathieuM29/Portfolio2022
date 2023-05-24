@@ -8,21 +8,25 @@
 }
 
 //desktop version
-.succes {
+@media screen and (min-width: 1024px) {
 
-  padding: 1.2em;
-  border-radius: 3px;
-  position: absolute;
-  top: 163%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: v.$secondary-color;
-  color: v.$primary-color;
-  animation: fade 0.3s ease-out;
+  .succes {
+
+    padding: 1.2em;
+    border-radius: 3px;
+    position: absolute;
+    top: 163%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: v.$secondary-color;
+    color: v.$primary-color;
+    animation: fade 0.3s ease-out;
+  }
 }
 
+
 //mobil version
-@media screen and (min-width: 320px) and (max-width: 420px) {
+@media screen and (max-width: 767px) {
 
   .succes {
 
@@ -36,6 +40,20 @@
     color: v.$primary-color;
   }
 }
+// @media screen and (min-width: 320px) and (max-width: 420px) {
+
+//   .succes {
+
+//     padding: 1.2em;
+//     border-radius: 3px;
+//     position: absolute;
+//     top: 169%;
+//     margin-left: auto;
+//     margin-right: auto;
+//     background-color: v.$secondary-color;
+//     color: v.$primary-color;
+//   }
+// }
 
 @keyframes fade {
 

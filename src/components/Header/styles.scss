@@ -8,16 +8,19 @@
 }
 
 //desktop version
-.header {
+@media screen and (min-width: 1024px) {
 
-  height: 80%;
-  width: 6%;
-  background-color: transparent;
-  @include flex($direction: column, $justify: flex-start, $align: flex-end);
+  .header {
+
+    height: 80%;
+    width: 6%;
+    background-color: transparent;
+    @include flex($direction: column, $justify: flex-start, $align: flex-end);
+  }
 }
 
 //mobil version
-@media screen and (min-width: 320px) and (max-width: 420px) {
+@media screen and (max-width: 767px) {
 
   .header {
 
@@ -30,4 +33,17 @@
     z-index: 999;
   }
 }
+// @media screen and (min-width: 320px) and (max-width: 420px) {
+
+//   .header {
+
+//     height: 20%;
+//     width: 100%;
+//     background-color: v.$primary-color;
+//     @include flex($direction: column, $justify: flex-start, $align: center);
+//     position: sticky;
+//     top: 0;
+//     z-index: 999;
+//   }
+// }
 

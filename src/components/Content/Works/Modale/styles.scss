@@ -8,209 +8,311 @@
 }
 
 //desktop version
-.modale {
+@media screen and (min-width: 1024px) {
 
-  height: auto;
-  width: 30%;
-  position: absolute;
-  top: 1%;
-  left: 35%;
-  z-index: 999;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: v.$primary-color;
-  @include flex($direction: column, $justify: flex-start, $align: center);
-  -webkit-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
-  box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
-  animation: pop 0.2s ease-out;
+  .modale {
 
-  &__picture {
-
-    height: 30%;
-    width: 100%;
-    position: relative;
-    @include flex($direction: row, $justify: center, $align: center);
-
-    &--img {
-
-      max-height: 100%;
+    height: auto;
+    width: 30%;
+    position: absolute;
+    top: 1%;
+    left: 35%;
+    z-index: 999;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: v.$primary-color;
+    @include flex($direction: column, $justify: flex-start, $align: center);
+    -webkit-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+    animation: pop 0.2s ease-out;
+  
+    &__picture {
+  
+      height: 30%;
       width: 100%;
-    }
-
-    &--cross {
-
-      position: absolute;
-      top: 3%;
-      left: 93%;
-      font-size: calc(v.$font-size / 0.7);
-      transition: 0.5s;
-    }
-
-    &--cross:hover {
-
-      transition: 0.5s;
-      transform: scale(1.2) rotate(90deg);
-    }
-  }
-
-  &__desc {
-
-    height: 70%;
-    width: 100%;
-    padding: 1.4em;
-    @include flex($direction: column, $justify: flex-start, $align: flex-start);
-
-    &--title {
-
-      font-size: calc(v.$font-size / 0.8);
-      font-weight: 700;
-    }
-
-    &--subTitle {
-
-      color: #222;
-      margin: 1.4em 0;
-    }
-
-    &--text {
-
-      font-size: calc(v.$font-size / 1);
-      line-height: 1.4;
-      
-    }
-
-    &__listTechnos {
-
-      height: 40%;
-      margin: 1.1em 0 1.1em 0.5em;
-
-      &--item {
-
-        margin-bottom: 0.5em;     
+      position: relative;
+      @include flex($direction: row, $justify: center, $align: center);
+  
+      &--img {
+  
+        max-height: 100%;
+        width: 100%;
+      }
+  
+      &--cross {
+  
+        position: absolute;
+        top: 3%;
+        left: 93%;
+        font-size: calc(v.$font-size / 0.7);
+        transition: 0.5s;
+      }
+  
+      &--cross:hover {
+  
+        transition: 0.5s;
+        transform: scale(1.2) rotate(90deg);
       }
     }
-
-    &__btns {
-
-      height: 40%;
-      width: 90%;
-      @include flex($direction: row, $justify: flex-start, $align: center);
-
-      &--link {
-
-        background-color: v.$secondary-color;
-        padding: 1em;
+  
+    &__desc {
+  
+      height: 70%;
+      width: 100%;
+      padding: 1.4em;
+      @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  
+      &--title {
+  
+        font-size: calc(v.$font-size / 0.8);
+        font-weight: 700;
+      }
+  
+      &--subTitle {
+  
+        color: #222;
+        margin: 1.4em 0;
+      }
+  
+      &--text {
+  
         font-size: calc(v.$font-size / 1);
-        border-radius: 3px;
-        color: v.$primary-color;
-        margin-right: 1.2em;
+        line-height: 1.4;
         
+      }
+  
+      &__listTechnos {
+  
+        height: 40%;
+        margin: 1.1em 0 1.1em 0.5em;
+  
+        &--item {
+  
+          margin-bottom: 0.5em;     
+        }
+      }
+  
+      &__btns {
+  
+        height: 40%;
+        width: 90%;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+  
+        &--link {
+  
+          background-color: v.$secondary-color;
+          padding: 1em;
+          font-size: calc(v.$font-size / 1);
+          border-radius: 3px;
+          color: v.$primary-color;
+          margin-right: 1.2em;
+          
+        }
       }
     }
   }
 }
 
 //mobil version
-@media screen and (min-width: 320px) and (max-width: 420px) {
+@media screen and (max-width: 767px) {
 
-    .modale {
+  .modale {
 
-      height: auto;
-      width: 90%;
-      position: absolute;
-      top: 1%;
-      left: 7%;
-      z-index: 999;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: v.$primary-color;
-      @include flex($direction: column, $justify: flex-start, $align: center);
-      -webkit-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
-      -moz-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
-      box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
-      
+    height: auto;
+    width: 90%;
+    position: absolute;
+    top: 1%;
+    left: 7%;
+    z-index: 999;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: v.$primary-color;
+    @include flex($direction: column, $justify: flex-start, $align: center);
+    -webkit-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+    
 
-      &__picture {
+    &__picture {
 
-        height: 30%;
+      height: 30%;
+      width: 100%;
+      position: relative;
+      @include flex($direction: row, $justify: center, $align: center);
+
+      &--img {
+
+        max-height: 100%;
         width: 100%;
-        position: relative;
-        @include flex($direction: row, $justify: center, $align: center);
+      }
 
-        &--img {
+      &--cross {
 
-          max-height: 100%;
-          width: 100%;
-        }
+        position: absolute;
+        top: 3%;
+        left: 93%;
+        font-size: calc(v.$font-size / 0.7);
+      }
+    }
 
-        &--cross {
+    &__desc {
 
-          position: absolute;
-          top: 3%;
-          left: 93%;
-          font-size: calc(v.$font-size / 0.7);
+      height: 70%;
+      width: 100%;
+      padding: 1.4em;
+      @include flex($direction: column, $justify: flex-start, $align: flex-start);
+
+      &--title {
+
+        font-size: calc(v.$font-size / 0.8);
+        font-weight: 700;
+      }
+
+      &--subTitle {
+
+        color: #222;
+        margin: 1.4em 0;
+      }
+
+      &--text {
+
+        font-size: calc(v.$font-size / 1);
+        line-height: 1.4;
+        
+      }
+
+      &__listTechnos {
+
+        height: 40%;
+        margin: 1.1em 0 1.1em 0.5em;
+
+        &--item {
+
+        margin-bottom: 0.5em; 
+        
         }
       }
 
-      &__desc {
+      &__btns {
 
-        height: 70%;
-        width: 100%;
-        padding: 1.4em;
-        @include flex($direction: column, $justify: flex-start, $align: flex-start);
+        height: 40%;
+        width: 90%;
+        @include flex($direction: row, $justify: flex-start, $align: center);
 
-        &--title {
+        &--link {
 
-          font-size: calc(v.$font-size / 0.8);
-          font-weight: 700;
-        }
-
-        &--subTitle {
-
-          color: #222;
-          margin: 1.4em 0;
-        }
-
-        &--text {
-
-          font-size: calc(v.$font-size / 1);
-          line-height: 1.4;
+          background-color: v.$secondary-color;
+          padding: 0.7em;
+          font-size: calc(v.$font-size / 1.2);
+          border-radius: 3px;
+          color: v.$primary-color;
+          margin-right: 1.2em;
           
-        }
-
-        &__listTechnos {
-
-          height: 40%;
-          margin: 1.1em 0 1.1em 0.5em;
-
-          &--item {
-
-          margin-bottom: 0.5em; 
-          
-          }
-        }
-
-        &__btns {
-
-          height: 40%;
-          width: 90%;
-          @include flex($direction: row, $justify: flex-start, $align: center);
-
-          &--link {
-
-            background-color: v.$secondary-color;
-            padding: 0.7em;
-            font-size: calc(v.$font-size / 1.2);
-            border-radius: 3px;
-            color: v.$primary-color;
-            margin-right: 1.2em;
-            
-          }
         }
       }
     }
+  }
 }
+// @media screen and (min-width: 320px) and (max-width: 420px) {
+
+//     .modale {
+
+//       height: auto;
+//       width: 90%;
+//       position: absolute;
+//       top: 1%;
+//       left: 7%;
+//       z-index: 999;
+//       margin-left: auto;
+//       margin-right: auto;
+//       background-color: v.$primary-color;
+//       @include flex($direction: column, $justify: flex-start, $align: center);
+//       -webkit-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+//       -moz-box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+//       box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.75);
+      
+
+//       &__picture {
+
+//         height: 30%;
+//         width: 100%;
+//         position: relative;
+//         @include flex($direction: row, $justify: center, $align: center);
+
+//         &--img {
+
+//           max-height: 100%;
+//           width: 100%;
+//         }
+
+//         &--cross {
+
+//           position: absolute;
+//           top: 3%;
+//           left: 93%;
+//           font-size: calc(v.$font-size / 0.7);
+//         }
+//       }
+
+//       &__desc {
+
+//         height: 70%;
+//         width: 100%;
+//         padding: 1.4em;
+//         @include flex($direction: column, $justify: flex-start, $align: flex-start);
+
+//         &--title {
+
+//           font-size: calc(v.$font-size / 0.8);
+//           font-weight: 700;
+//         }
+
+//         &--subTitle {
+
+//           color: #222;
+//           margin: 1.4em 0;
+//         }
+
+//         &--text {
+
+//           font-size: calc(v.$font-size / 1);
+//           line-height: 1.4;
+          
+//         }
+
+//         &__listTechnos {
+
+//           height: 40%;
+//           margin: 1.1em 0 1.1em 0.5em;
+
+//           &--item {
+
+//           margin-bottom: 0.5em; 
+          
+//           }
+//         }
+
+//         &__btns {
+
+//           height: 40%;
+//           width: 90%;
+//           @include flex($direction: row, $justify: flex-start, $align: center);
+
+//           &--link {
+
+//             background-color: v.$secondary-color;
+//             padding: 0.7em;
+//             font-size: calc(v.$font-size / 1.2);
+//             border-radius: 3px;
+//             color: v.$primary-color;
+//             margin-right: 1.2em;
+            
+//           }
+//         }
+//       }
+//     }
+// }
 
 @keyframes pop {
 

@@ -8,18 +8,21 @@
 }
 
 //desktop version
-.portfolio {
+@media screen and (min-width: 1024px) {
 
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  @include flex($direction: row, $justify: flex-start, $align: center);
-  border-radius: 5px;
-  position: relative;
+  .portfolio {
+
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    @include flex($direction: row, $justify: flex-start, $align: center);
+    border-radius: 5px;
+    position: relative;
+  }
 }
 
 //mobil version
-@media screen and (min-width: 320px) and (max-width: 420px) {
+@media screen and (max-width: 767px) {
 
   .portfolio {
 
@@ -31,6 +34,18 @@
     position:initial
   }
 }
+// @media screen and (min-width: 320px) and (max-width: 420px) {
+
+//   .portfolio {
+
+//     height: 100%;
+//     width: 100%;
+//     background-color: v.$primary-color;
+//     @include flex($direction: column, $justify: flex-start, $align: center);
+//     border-radius: 0px;
+//     position:initial
+//   }
+// }
 
 @keyframes gradient {
 	0% {
