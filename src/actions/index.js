@@ -5,6 +5,7 @@ export const CHANGE_INPUT_SUBJECT_VALUE = 'CHANGE_INPUT_SUBJECT_VALUE';
 export const CHANGE_INPUT_NAME_VALUE = 'CHANGE_INPUT_NAME_VALUE';
 export const CHANGE_INPUT_MAIL_VALUE = 'CHANGE_INPUT_MAIL_VALUE';
 export const CHANGE_INPUT_MESSAGE_VALUE = 'CHANGE_INPUT_MESSAGE_VALUE';
+export const CLEAR_INPUTS_FORMS = 'CLEAR_INPUTS_FORMS';
 export const CHECK_IF_EMPTY = 'CHECK_IF_EMPTY';
 export const CHECK_IF_SUCCES = 'CHECK_IF_SUCCES';
 export const IS_ITEM_ACTIVE = 'IS_ITEM_ACTIVE';
@@ -44,6 +45,10 @@ export const changeInputMailValue = (payload) => ({
 export const changeInputMessageValue = (payload) => ({
   type: CHANGE_INPUT_MESSAGE_VALUE,
   payload,
+});
+
+export const clearInputsForm = () => ({
+  type: CLEAR_INPUTS_FORMS,
 });
 
 export const checkIfEmpty = () => ({

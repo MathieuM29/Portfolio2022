@@ -5,6 +5,7 @@ import {
   CHANGE_INPUT_NAME_VALUE,
   CHANGE_INPUT_MAIL_VALUE,
   CHANGE_INPUT_MESSAGE_VALUE,
+  CLEAR_INPUTS_FORMS,
   CHECK_IF_EMPTY,
   CHECK_IF_SUCCES,
   IS_ITEM_ACTIVE,
@@ -68,6 +69,14 @@ export default (state = stateInitial, action = {}) => {
         return {
           ...state,
           isSucces: !state.isSucces,
+        };
+      case CLEAR_INPUTS_FORMS:
+        return {
+          ...state,
+          subjectForm: '',
+          nameForm: '',
+          mailForm: '',
+          messageForm: '',
         };
       case CHECK_IF_EMPTY:
         return {

@@ -2,7 +2,7 @@
 import './styles.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { changeInputSubjectValue, changeInputNameValue, changeInputMailValue, changeInputMessageValue, checkIfEmpty, checkIfSucces } from 'src/actions';
+import { changeInputSubjectValue, changeInputNameValue, changeInputMailValue, changeInputMessageValue, clearInputsForm, checkIfEmpty, checkIfSucces } from 'src/actions';
 import emailjs from 'emailjs-com';
 import Succes from './Succes';
 import Error from './Error';
@@ -24,8 +24,8 @@ const Contact = () => {
 
     
 
-  const classnames = isEmpty ? 'contact__form__label--input--empty' : 'contact__form__label--input';
-  
+  const classnames = isEmpty ? 'contact__form__label--input--empty' : 'contact__form__label--input' && isSucces ? 'contact__form__label--input--succes' : 'contact__form__label--input';
+
   // const handleInputChange = (e) => {
   //   dispatch(changeInputValue(e.target.value, e.target.name));
   //   console.log(e.target.value, e.target.name);
@@ -54,16 +54,7 @@ const Contact = () => {
 
   console.log('sujet :', subjectForm, 'nom :', nameForm, 'mail: ', mailForm, 'message: ', messageForm);
 
-  const validate = () => {
-
-      dispatch(checkIfSucces());
-      console.log('done');
-
-      setTimeout(() => {
-        dispatch(checkIfSucces());
-      }, 3000);
-  };
-
+ 
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -74,9 +65,33 @@ const Contact = () => {
       }, (error) => {
           console.log(error.text);
       });
+      // validate();
       e.target.reset();
+  };
 
-    validate();
+  const validate = (e) => {
+
+    if(subjectForm, nameForm, mailForm, messageForm) {
+      sendEmail(e);
+      e.preventDefault();
+      dispatch(checkIfSucces());
+      console.log('done');
+      dispatch(clearInputsForm());
+
+      setTimeout(() => {
+        dispatch(checkIfSucces());
+      }, 3000);
+    }
+
+    else{
+      e.preventDefault();
+      dispatch(checkIfEmpty());
+      console.log('inputs are empty !');
+
+      setTimeout(() => {
+        dispatch(checkIfEmpty());
+      }, 3000);
+    }
   };
 
   return (
@@ -108,7 +123,7 @@ const Contact = () => {
       <div className="contact__title--border">
         <h2 className="contact__title--text"><span>Contactez</span> moi</h2>
       </div>
-      <form className="contact__form" onSubmit={sendEmail}>
+      <form className="contact__form" onSubmit={validate}>
         <label className="contact__form__label" htmlFor="subject">
           Sujet
           <input className={classnames} type="text" value={subjectForm} id="subject" name="subject" onChange={handleInputSubjectChange} />
@@ -130,8 +145,8 @@ const Contact = () => {
         </label>
         <button className="contact__form--btn" type="submit">Envoyer</button>
       </form>
-      {isSucces && subjectForm && nameForm && mailForm && messageForm && <Succes />}
-      {/* {!isSucces && <Error />} */}
+      {isSucces && <Succes />}
+      {isEmpty && <Error />}
     </section>
   );
 };
