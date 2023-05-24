@@ -8,6 +8,35 @@
 }
 
 //desktop version
+@media screen and (min-width: 1024px) {
+
+  .error {
+
+    margin-bottom: 1.2em;
+    border: 2px solid red;
+    padding: 1.2em;
+    border-radius: 3px;
+    position: absolute;
+    top: 160%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    color: v.$primary-color;
+    animation: fade 0.3s ease-out;
+
+    &--text {
+
+      font-size: calc(v.$font-size / 1);
+    }
+
+    &--icon {
+
+      margin: 0 0.4em;
+      font-size: calc(v.$font-size / 0.8);
+
+    }
+  }
+}
 
 //mobil version
 @media screen and (min-width: 320px) and (max-width: 420px) {
@@ -15,6 +44,7 @@
   .error {
 
     margin-bottom: 1.2em;
+    border: 2px solid red;
 
     &--text {
 
@@ -31,4 +61,17 @@
   }
 }
 
+@keyframes fade {
 
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

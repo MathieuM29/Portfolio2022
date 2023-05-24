@@ -2,7 +2,7 @@
 import './styles.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { changeInputValue, checkIfEmpty, checkIfSucces } from 'src/actions';
+import { changeInputSubjectValue, changeInputNameValue, changeInputMailValue, changeInputMessageValue, checkIfEmpty, checkIfSucces } from 'src/actions';
 import emailjs from 'emailjs-com';
 import Succes from './Succes';
 import Error from './Error';
@@ -22,16 +22,42 @@ const Contact = () => {
     mailError,
     messageError } = useSelector((state) => state);
 
+    
+
   const classnames = isEmpty ? 'contact__form__label--input--empty' : 'contact__form__label--input';
   
-  const handleInputChange = (e) => {
-    dispatch(changeInputValue(e.target.value, e.target.name));
+  // const handleInputChange = (e) => {
+  //   dispatch(changeInputValue(e.target.value, e.target.name));
+  //   console.log(e.target.value, e.target.name);
+  //   console.log(subjectForm);
+  // };
+
+  const handleInputSubjectChange = (e) => {
+    dispatch(changeInputSubjectValue(e.target.value, e.target.name));
+    console.log(e.target.value, e.target.name);
   };
+
+  const handleInputNameChange = (e) => {
+    dispatch(changeInputNameValue(e.target.value, e.target.name));
+    console.log(e.target.value, e.target.name);
+  };
+
+  const handleInputMailChange = (e) => {
+    dispatch(changeInputMailValue(e.target.value, e.target.name));
+    console.log(e.target.value, e.target.name);
+  };
+
+  const handleInputMessageChange = (e) => {
+    dispatch(changeInputMessageValue(e.target.value, e.target.name));
+    console.log(e.target.value, e.target.name);
+  };
+
+  console.log('sujet :', subjectForm, 'nom :', nameForm, 'mail: ', mailForm, 'message: ', messageForm);
 
   const validate = () => {
 
       dispatch(checkIfSucces());
-      // console.log('done');
+      console.log('done');
 
       setTimeout(() => {
         dispatch(checkIfSucces());
@@ -44,6 +70,7 @@ const Contact = () => {
     emailjs.sendForm('gmail', 'template_portfolio', e.target, 'UG9tgDVMjnAuQEz2G')
       .then((result) => {
         console.log('Envoi', result.text);
+        console.log(e.target);
       }, (error) => {
           console.log(error.text);
       });
@@ -84,26 +111,27 @@ const Contact = () => {
       <form className="contact__form" onSubmit={sendEmail}>
         <label className="contact__form__label" htmlFor="subject">
           Sujet
-          <input className={classnames} type="text" value={subjectForm} id="subject" name="subject" onChange={handleInputChange} />
+          <input className={classnames} type="text" value={subjectForm} id="subject" name="subject" onChange={handleInputSubjectChange} />
         </label>
         
         <label className="contact__form__label" htmlFor="name">
           Nom complet
-          <input className={classnames} type="text" value={nameForm} id="name" name="name" onChange={handleInputChange} />
+          <input className={classnames} type="text" value={nameForm} id="name" name="name" onChange={handleInputNameChange} />
         </label>
 
         <label className="contact__form__label" htmlFor="mail">
           Adresse email
-          <input className={classnames} type="text" value={mailForm} id="mail" name="mail" onChange={handleInputChange} />
+          <input className={classnames} type="text" value={mailForm} id="mail" name="mail" onChange={handleInputMailChange} />
         </label>
 
         <label className="contact__form__label" htmlFor="message">
           Message
-          <input className={classnames} type="text" value={messageForm} id="message" name="message" onChange={handleInputChange} />
+          <input className={classnames} type="text" value={messageForm} id="message" name="message" onChange={handleInputMessageChange} />
         </label>
         <button className="contact__form--btn" type="submit">Envoyer</button>
       </form>
-      {isSucces && <Succes />}
+      {isSucces && subjectForm && nameForm && mailForm && messageForm && <Succes />}
+      {/* {!isSucces && <Error />} */}
     </section>
   );
 };
